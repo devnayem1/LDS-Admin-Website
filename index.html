@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════ SEO META ═══════════ -->
+  <title id="meta-title">LDS Admin – Energetický management distribučních sítí</title>
+  <meta name="description" id="meta-desc" content="Komplexní platforma pro energetický management budov a distribučních sítí. Monitoring v reálném čase, GIS, správa odběratelů, hlídání revizí a integrace s průmyslovými systémy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="canonical" href="https://ldsadmin.cz/" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="cs" href="https://ldsadmin.cz/" />
+  <link rel="alternate" hreflang="en" href="https://ldsadmin.cz/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://ldsadmin.cz/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LDS Admin" />
+  <meta property="og:title" id="og-title" content="LDS Admin – Energetický management distribučních sítí" />
+  <meta property="og:description" id="og-desc" content="Komplexní platforma pro energetický management budov a distribučních sítí." />
+  <meta property="og:url" id="og-url" content="https://ldsadmin.cz/" />
+  <meta property="og:locale" id="og-locale" content="cs_CZ" />
+  <meta property="og:image" content="https://ldsadmin.cz/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="tw-title" content="LDS Admin – Energetický management" />
+  <meta name="twitter:description" id="tw-desc" content="Komplexní platforma pro energetický management distribučních sítí." />
+  <meta name="twitter:image" content="https://ldsadmin.cz/og-image.png" />
+
+  <!-- ═══════════ FONTS ═══════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════ GTM HEAD ═══════════ -->
+  <!-- Replace GTM-XXXXXXX with your GTM Container ID -->
+  <script>
+    // Consent Mode v2 defaults - no tracking before consent
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+  </script>
+  <!-- GTM Script (replace GTM-XXXXXXX) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- ═══════════ JSON-LD STRUCTURED DATA ═══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ldsadmin.cz/#organization",
+        "name": "LDS Admin",
+        "url": "https://ldsadmin.cz",
+        "logo": "https://ldsadmin.cz/logo.png",
+        "email": "support@ldsadmin.cz",
+        "address": { "@type": "PostalAddress", "addressCountry": "CZ" },
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ldsadmin.cz/#website",
+        "url": "https://ldsadmin.cz",
+        "name": "LDS Admin",
+        "publisher": { "@id": "https://ldsadmin.cz/#organization" },
+        "inLanguage": ["cs", "en"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ldsadmin.cz/#product",
+        "name": "LDS Admin",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "priceCurrency": "CZK" },
+        "description": "Komplexní platforma pro energetický management distribučních sítí a budov.",
+        "publisher": { "@id": "https://ldsadmin.cz/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ldsadmin.cz/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Co je LDS Admin?",
+            "acceptedAnswer": { "@type": "Answer", "text": "LDS Admin je komplexní webová platforma pro energetický management distribučních sítí a budov. Umožňuje monitoring v reálném čase, správu odběratelů, GIS vizualizaci, dispečerský přehled a sledování revizí." }
+          },
+          {
+            "@type": "Question",
+            "name": "S jakými systémy se LDS Admin integruje?",
+            "acceptedAnswer": { "@type": "Answer", "text": "LDS Admin se nativně integruje s platformou Mervis, SCADA systémy a prostřednictvím univerzálního API s libovolným průmyslovým systémem nebo hardwarem." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je LDS Admin vhodný pro správce budov?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano, platforma je navržena pro správce budov, distribuční společnosti, servisní týmy i energetické manažery. Každý typ uživatele najde v systému funkce přizpůsobené svým potřebám." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ═══════════ CSS VARIABLES ═══════════ */
+    :root {
+      --brand: #465FFF;
+      --brand-dark: #2d47e0;
+      --brand-light: #6b82ff;
+      --brand-glow: rgba(70,95,255,0.18);
+      --brand-glow-sm: rgba(70,95,255,0.10);
+      --surface: #0a0d1a;
+      --surface-2: #0f1323;
+      --surface-3: #141829;
+      --surface-4: #1a1f33;
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(70,95,255,0.35);
+      --text-primary: #f0f2ff;
+      --text-secondary: #8b93b5;
+      --text-muted: #555e80;
+      --success: #22c55e;
+      --error: #ef4444;
+      --warning: #f59e0b;
+      --radius-sm: 8px;
+      --radius: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-brand: 0 0 40px rgba(70,95,255,0.25);
+      --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.3);
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ═══════════ RESET & BASE ═══════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--surface);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ═══════════ SCROLLBAR ═══════════ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface-2); }
+    ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
+
+    /* ═══════════ TYPOGRAPHY ═══════════ */
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 1.15; }
+
+    /* ═══════════ LAYOUT UTILS ═══════════ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section-sm { padding: 64px 0; }
+
+    /* ═══════════ NOISE TEXTURE OVERLAY ═══════════ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ═══════════ BUTTONS ═══════════ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: var(--radius-sm);
+      font-size: 0.9rem; font-weight: 600; font-family: 'Inter', sans-serif;
+      transition: all var(--transition); white-space: nowrap;
+      position: relative; overflow: hidden;
+    }
+    .btn-primary {
+      background: var(--brand); color: #fff;
+      box-shadow: 0 0 0 0 var(--brand-glow);
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(70,95,255,0.4); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-ghost {
+      background: transparent; color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { color: var(--text-primary); border-color: var(--border-hover); background: var(--brand-glow-sm); }
+    .btn-lg { padding: 15px 32px; font-size: 1rem; border-radius: var(--radius); }
+    .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* ═══════════ BADGE ═══════════ */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      background: var(--brand-glow); color: var(--brand-light);
+      border: 1px solid rgba(70,95,255,0.25);
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-light); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+    /* ═══════════ GLASS CARD ═══════════ */
+    .glass {
+      background: rgba(20,24,41,0.7);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .glass-hover { transition: all var(--transition); }
+    .glass-hover:hover {
+      border-color: var(--border-hover);
+      background: rgba(25,30,52,0.85);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(70,95,255,0.15);
+    }
+
+    /* ═══════════ GRADIENT TEXT ═══════════ */
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 30%, var(--brand-light) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-brand {
+      background: linear-gradient(135deg, var(--brand-light) 0%, #a78bfa 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ═══════════ SECTION LABEL ═══════════ */
+    .section-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--brand-light); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--brand); border-radius: 1px; }
+
+    /* ═══════════ DIVIDER ═══════════ */
+    .divider { width: 100%; height: 1px; background: var(--border); }
+
+    /* ═══════════════════════════════════════ */
+    /* COOKIE CONSENT BANNER                  */
+    /* ═══════════════════════════════════════ */
+    #cookie-banner {
+      position: fixed; bottom: 24px; left: 24px; right: 24px; z-index: 9999;
+      max-width: 540px; margin: 0 auto;
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+      animation: slideUp 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes slideUp { from{transform:translateY(100px);opacity:0} to{transform:translateY(0);opacity:1} }
+    #cookie-banner.hidden { display: none; }
+    .cookie-title { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; margin-bottom:8px; }
+    .cookie-text { font-size:0.83rem; color:var(--text-secondary); margin-bottom:20px; line-height:1.5; }
+    .cookie-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .cookie-actions button { padding:9px 18px; border-radius:var(--radius-sm); font-size:0.83rem; font-weight:600; font-family:'Inter',sans-serif; transition:all var(--transition); cursor:pointer; border:none; }
+    .btn-accept-all { background:var(--brand); color:#fff; }
+    .btn-accept-all:hover { background:var(--brand-light); }
+    .btn-necessary { background:var(--surface-4); color:var(--text-secondary); border:1px solid var(--border) !important; }
+    .btn-necessary:hover { color:var(--text-primary); }
+
+    /* ═══════════════════════════════════════ */
+    /* NAVIGATION                              */
+    /* ═══════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(10,13,26,0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; padding: 0 24px; max-width: 1200px; margin: 0 auto;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700;
+      color: var(--text-primary); text-decoration: none;
+    }
+    .logo-icon {
+      width: 34px; height: 34px; background: var(--brand);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 900; color: #fff; letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+    }
+    .nav-links a {
+      padding: 7px 14px; border-radius: var(--radius-sm);
+      font-size: 0.88rem; font-weight: 500; color: var(--text-secondary);
+      transition: all var(--transition);
+    }
+    .nav-links a:hover { color: var(--text-primary); background: var(--brand-glow-sm); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .lang-switcher {
+      display: flex; align-items: center; gap: 2px;
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 3px; overflow: hidden;
+    }
+    .lang-btn {
+      padding: 5px 10px; border-radius: 5px; font-size: 0.78rem;
+      font-weight: 600; color: var(--text-muted); transition: all var(--transition);
+      cursor: pointer;
+    }
+    .lang-btn.active { background: var(--brand); color: #fff; }
+    .lang-btn:not(.active):hover { color: var(--text-primary); }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer;
+    }
+    .nav-toggle span { width: 22px; height: 2px; background: var(--text-secondary); border-radius: 1px; transition: all var(--transition); }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none; position: fixed; inset: 0; top: 68px;
+      background: rgba(10,13,26,0.97); backdrop-filter: blur(20px);
+      flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 1.2rem; font-weight: 600; color: var(--text-secondary);
+      padding: 14px 32px; border-radius: var(--radius); width: 100%; max-width: 280px;
+      text-align: center; transition: all var(--transition);
+    }
+    .nav-mobile a:hover { color: var(--text-primary); background: var(--brand-glow-sm); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ═══════════════════════════════════════ */
+    /* HERO                                    */
+    /* ═══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 120px 0 80px; position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(70,95,255,0.14) 0%, transparent 65%),
+                  radial-gradient(ellipse 60% 50% at 80% 80%, rgba(70,95,255,0.07) 0%, transparent 60%),
+                  var(--surface);
+    }
+    /* Animated grid */
+    .hero-grid {
+      position: absolute; inset: 0; z-index: -1;
+      background-image:
+        linear-gradient(rgba(70,95,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70,95,255,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 0%, transparent 80%);
+      animation: gridFloat 8s ease-in-out infinite;
+    }
+    @keyframes gridFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; animation: orbFloat 10s ease-in-out infinite;
+    }
+    .orb-1 { width: 500px; height: 500px; background: rgba(70,95,255,0.1); top: -100px; left: -100px; animation-delay: 0s; }
+    .orb-2 { width: 400px; height: 400px; background: rgba(167,139,250,0.07); top: 30%; right: -80px; animation-delay: -4s; }
+    .orb-3 { width: 300px; height: 300px; background: rgba(70,95,255,0.06); bottom: 0; left: 30%; animation-delay: -7s; }
+    @keyframes orbFloat { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(15px,-15px) scale(1.03)} 66%{transform:translate(-10px,10px) scale(0.97)} }
+
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+      align-items: center; width: 100%;
+    }
+    .hero-label { margin-bottom: 24px; }
+    .hero-h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      letter-spacing: -0.03em; margin-bottom: 22px;
+      line-height: 1.08;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--text-secondary);
+      max-width: 480px; margin-bottom: 36px; line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .hero-stat {
+      background: var(--surface-2); padding: 16px 14px; text-align: center;
+    }
+    .hero-stat-val { font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--brand-light); }
+    .hero-stat-label { font-size:0.72rem; color:var(--text-muted); margin-top:3px; line-height:1.3; }
+
+    /* Dashboard mockup */
+    .hero-visual { position: relative; }
+    .dashboard-frame {
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.6), 0 0 0 1px rgba(70,95,255,0.1), var(--shadow-brand);
+      animation: dashFloat 6s ease-in-out infinite;
+    }
+    @keyframes dashFloat { 0%,100%{transform:translateY(0) rotate(-0.5deg)} 50%{transform:translateY(-10px) rotate(0.5deg)} }
+    .dash-titlebar {
+      background: var(--surface-2); padding: 12px 16px;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .dash-dots { display: flex; gap: 6px; }
+    .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dash-dot:nth-child(1){background:#ef4444;} .dash-dot:nth-child(2){background:#f59e0b;} .dash-dot:nth-child(3){background:#22c55e;}
+    .dash-url { flex: 1; background: var(--surface-3); border-radius: 5px; padding: 5px 12px; font-size:0.72rem; color:var(--text-muted); display:flex; align-items:center; gap:6px; }
+    .dash-url-dot { width:6px; height:6px; border-radius:50%; background:var(--success); flex-shrink:0; }
+    .dash-content { padding: 20px; }
+
+    /* Mini dashboard UI inside mockup */
+    .dash-sidebar-layout { display: flex; gap: 12px; }
+    .dash-sidebar {
+      width: 48px; background: var(--surface-4); border-radius: var(--radius-sm);
+      padding: 10px 8px; display: flex; flex-direction: column; gap: 8px; align-items: center;
+    }
+    .dash-nav-dot { width: 28px; height: 28px; border-radius: 7px; background: var(--surface-2); display: flex; align-items: center; justify-content: center; }
+    .dash-nav-dot.active { background: var(--brand); }
+    .dash-nav-dot svg { width: 13px; height: 13px; color: var(--text-muted); }
+    .dash-nav-dot.active svg { color: #fff; }
+    .dash-main { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .dash-header-row { display: flex; justify-content: space-between; align-items: center; }
+    .dash-page-title { font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:700; }
+    .dash-status-pill { font-size:0.65rem; background: rgba(34,197,94,0.15); color:#22c55e; padding:3px 8px; border-radius:100px; border:1px solid rgba(34,197,94,0.2); }
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .metric-card {
+      background: var(--surface-4); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 10px;
+    }
+    .metric-label { font-size:0.6rem; color:var(--text-muted); margin-bottom:4px; }
+    .metric-val { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; }
+    .metric-change { font-size:0.58rem; color:var(--success); margin-top:2px; }
+    .metric-change.down { color:var(--error); }
+    .chart-area {
+      background: var(--surface-4); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 12px; height: 90px; position: relative; overflow: hidden;
+    }
+    .chart-label { font-size:0.62rem; color:var(--text-muted); margin-bottom:8px; }
+    .chart-bars { display: flex; gap: 4px; align-items: flex-end; height: 56px; }
+    .chart-bar { flex: 1; border-radius: 3px 3px 0 0; min-height: 6px; transition: all var(--transition); }
+    .chart-bar:hover { filter: brightness(1.3); }
+    .map-preview {
+      background: var(--surface-4); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 10px; position: relative; overflow: hidden; height: 80px;
+    }
+    .map-label { font-size:0.62rem; color:var(--text-muted); margin-bottom:6px; }
+    .map-dots { position:absolute; inset:20px 10px 10px; }
+    .map-dot { position:absolute; border-radius:50%; }
+    .map-dot-lg { width:8px; height:8px; background:var(--brand); box-shadow:0 0 8px var(--brand); animation:mapPulse 2s infinite; }
+    .map-dot-sm { width:5px; height:5px; background:rgba(70,95,255,0.4); }
+    @keyframes mapPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.4)} }
+    .map-line { position:absolute; background:rgba(70,95,255,0.2); height:1px; transform-origin:left center; }
+    .alert-list { display:flex; flex-direction:column; gap:5px; }
+    .alert-item {
+      background:var(--surface-4); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:6px 10px;
+      display:flex; align-items:center; gap:8px; font-size:0.65rem;
+    }
+    .alert-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+    .alert-dot.ok{background:var(--success);} .alert-dot.warn{background:var(--warning);} .alert-dot.err{background:var(--error);}
+    .alert-name { color:var(--text-secondary); flex:1; }
+    .alert-val { color:var(--text-primary); font-weight:600; }
+
+    /* Floating badge on dashboard */
+    .dash-float-badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 12px 16px;
+      box-shadow: var(--shadow-card);
+      display: flex; align-items: center; gap: 10px;
+      animation: dashFloat 6s ease-in-out infinite reverse;
+    }
+    .dash-float-icon { width: 36px; height: 36px; background: rgba(34,197,94,0.15); border-radius: 8px; display:flex; align-items:center; justify-content:center; }
+    .dash-float-text { display:flex; flex-direction:column; gap:2px; }
+    .dash-float-val { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--success); }
+    .dash-float-label { font-size:0.68rem; color:var(--text-muted); }
+
+    @media(max-width:900px){
+      .hero-inner { grid-template-columns:1fr; gap:48px; }
+      .hero-visual { order: -1; }
+      .hero-stats { grid-template-columns: repeat(2,1fr); }
+    }
+
+    /* ═══════════════════════════════════════ */
+    /* TRUST / METRICS BAR                     */
+    /* ═══════════════════════════════════════ */
+    #trust { padding: 0; }
+    .trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--surface-2); padding: 20px 0;
+      display: flex; align-items: center; overflow: hidden; position: relative;
+    }
+    .trust-track {
+      display: flex; align-items: center; gap: 48px;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap; padding: 0 24px;
+    }
+    .trust-track:hover { animation-play-state: paused; }
+    @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .trust-item { display:flex; align-items:center; gap:10px; font-size:0.85rem; color:var(--text-muted); flex-shrink:0; }
+    .trust-item svg { width:18px; height:18px; color:var(--brand-light); flex-shrink:0; }
+    .trust-separator { width:1px; height:20px; background:var(--border); flex-shrink:0; }
+
+    /* ═══════════════════════════════════════ */
+    /* FEATURES                                */
+    /* ═══════════════════════════════════════ */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); overflow: hidden;
+    }
+    .feature-card {
+      background: var(--surface-2); padding: 32px;
+      transition: all var(--transition); position: relative; overflow: hidden;
+    }
+    .feature-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--brand-glow) 0%, transparent 60%);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-card:hover { background: var(--surface-3); }
+    .feature-icon {
+      width: 48px; height: 48px; background: var(--brand-glow);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; border: 1px solid rgba(70,95,255,0.2);
+      transition: all var(--transition);
+    }
+    .feature-card:hover .feature-icon { background: var(--brand); border-color: var(--brand); }
+    .feature-card:hover .feature-icon svg { color: #fff; }
+    .feature-icon svg { width: 22px; height: 22px; color: var(--brand-light); transition: color var(--transition); }
+    .feature-h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .feature-p { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.65; }
+
+    @media(max-width:900px){ .features-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:600px){ .features-grid { grid-template-columns:1fr; } }
+
+    /* ═══════════════════════════════════════ */
+    /* TARGET USERS                            */
+    /* ═══════════════════════════════════════ */
+    .users-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    }
+    .user-card {
+      padding: 32px; position: relative; overflow: hidden;
+    }
+    .user-card-num {
+      position: absolute; top: 24px; right: 24px;
+      font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; font-weight: 900;
+      color: rgba(70,95,255,0.06); line-height: 1;
+    }
+    .user-icon {
+      width: 52px; height: 52px; border-radius: var(--radius); margin-bottom: 20px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .user-icon svg { width: 24px; height: 24px; }
+    .user-h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .user-p { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; }
+    .user-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .user-tag {
+      font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 100px;
+      background: var(--surface-4); border: 1px solid var(--border); color: var(--text-secondary);
+    }
+    @media(max-width:640px){ .users-grid { grid-template-columns: 1fr; } }
+
+    /* ═══════════════════════════════════════ */
+    /* INTEGRATIONS                            */
+    /* ═══════════════════════════════════════ */
+    #integrations { background: var(--surface-2); }
+    .integrations-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px;
+    }
+    .integration-card {
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px 20px; text-align: center;
+      transition: all var(--transition);
+    }
+    .integration-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+    .int-icon { width: 52px; height: 52px; border-radius: 12px; margin: 0 auto 14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+    .int-name { font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:700; margin-bottom:6px; }
+    .int-desc { font-size:0.78rem; color:var(--text-muted); line-height:1.5; }
+    .int-badge { font-size:0.68rem; font-weight:700; padding:3px 8px; border-radius:100px; margin-top:10px; display:inline-block; }
+    .int-badge.native { background:rgba(70,95,255,0.15); color:var(--brand-light); border:1px solid rgba(70,95,255,0.2); }
+    .int-badge.supported { background:rgba(34,197,94,0.1); color:var(--success); border:1px solid rgba(34,197,94,0.2); }
+    .int-badge.custom { background:rgba(245,158,11,0.1); color:var(--warning); border:1px solid rgba(245,158,11,0.2); }
+    @media(max-width:768px){ .integrations-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:480px){ .integrations-grid { grid-template-columns:1fr; } }
+
+    /* ═══════════════════════════════════════ */
+    /* FAQ                                     */
+    /* ═══════════════════════════════════════ */
+    .faq-list { display:flex; flex-direction:column; gap:8px; max-width:800px; margin:0 auto; }
+    .faq-item { background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:border-color var(--transition); }
+    .faq-item.open { border-color:var(--border-hover); }
+    .faq-question {
+      width:100%; display:flex; justify-content:space-between; align-items:center;
+      padding:20px 24px; font-family:'Space Grotesk',sans-serif; font-size:0.97rem;
+      font-weight:600; color:var(--text-primary); cursor:pointer; gap:16px;
+      text-align:left; background:transparent;
+    }
+    .faq-chevron { width:18px; height:18px; color:var(--text-muted); flex-shrink:0; transition:transform var(--transition); }
+    .faq-item.open .faq-chevron { transform:rotate(180deg); color:var(--brand-light); }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
+    .faq-answer-inner { padding:0 24px 20px; font-size:0.9rem; color:var(--text-secondary); line-height:1.7; }
+
+    /* ═══════════════════════════════════════ */
+    /* CONTACT                                 */
+    /* ═══════════════════════════════════════ */
+    #contact { position:relative; overflow:hidden; }
+    #contact::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 70% 60% at 50% 100%, rgba(70,95,255,0.1) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+    .contact-info { padding-top:8px; }
+    .contact-info h2 { font-size:2.2rem; margin-bottom:16px; }
+    .contact-info p { color:var(--text-secondary); line-height:1.7; margin-bottom:32px; }
+    .contact-details { display:flex; flex-direction:column; gap:16px; }
+    .contact-detail {
+      display:flex; align-items:center; gap:14px;
+      padding:16px; background:var(--surface-2); border:1px solid var(--border);
+      border-radius:var(--radius); transition:all var(--transition);
+    }
+    .contact-detail:hover { border-color:var(--border-hover); }
+    .contact-detail-icon { width:40px; height:40px; background:var(--brand-glow); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .contact-detail-icon svg { width:18px; height:18px; color:var(--brand-light); }
+    .contact-detail-label { font-size:0.72rem; color:var(--text-muted); margin-bottom:2px; }
+    .contact-detail-val { font-size:0.9rem; font-weight:600; color:var(--text-primary); }
+
+    /* Form */
+    .contact-form { background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius-xl); padding:36px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .form-group { display:flex; flex-direction:column; gap:6px; }
+    .form-group.full { grid-column:1/-1; }
+    label { font-size:0.8rem; font-weight:600; color:var(--text-secondary); }
+    label span.req { color:var(--brand-light); }
+    input, textarea, select {
+      background:var(--surface-3); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:12px 14px;
+      color:var(--text-primary); font-family:'Inter',sans-serif; font-size:0.9rem;
+      transition:all var(--transition); outline:none; width:100%;
+    }
+    input::placeholder, textarea::placeholder { color:var(--text-muted); }
+    input:focus, textarea:focus { border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-glow-sm); }
+    input.error-field, textarea.error-field { border-color:var(--error); }
+    textarea { resize:vertical; min-height:120px; }
+    .form-submit { margin-top:8px; }
+    .form-submit .btn { width:100%; justify-content:center; }
+    .form-msg { margin-top:14px; padding:12px 16px; border-radius:var(--radius-sm); font-size:0.85rem; display:none; }
+    .form-msg.success { display:block; background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.2); color:var(--success); }
+    .form-msg.error { display:block; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2); color:var(--error); }
+    .field-error { font-size:0.75rem; color:var(--error); margin-top:3px; }
+    @media(max-width:900px){ .contact-layout{grid-template-columns:1fr;} }
+    @media(max-width:520px){ .form-row{grid-template-columns:1fr;} }
+
+    /* ═══════════════════════════════════════ */
+    /* FOOTER                                  */
+    /* ═══════════════════════════════════════ */
+    footer {
+      background: var(--surface-2);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px; padding-bottom: 40px; border-bottom: 1px solid var(--border);
+    }
+    .footer-brand p { font-size:0.87rem; color:var(--text-muted); margin-top:14px; line-height:1.6; max-width:280px; }
+    .footer-col-title { font-family:'Space Grotesk',sans-serif; font-size:0.82rem; font-weight:700; color:var(--text-primary); margin-bottom:16px; letter-spacing:0.04em; text-transform:uppercase; }
+    .footer-links { display:flex; flex-direction:column; gap:10px; }
+    .footer-links a { font-size:0.87rem; color:var(--text-muted); transition:color var(--transition); }
+    .footer-links a:hover { color:var(--text-primary); }
+    .footer-bottom {
+      display:flex; justify-content:space-between; align-items:center;
+      padding-top:28px; flex-wrap:wrap; gap:12px;
+    }
+    .footer-copy { font-size:0.82rem; color:var(--text-muted); }
+    .footer-legal { display:flex; gap:20px; }
+    .footer-legal a { font-size:0.82rem; color:var(--text-muted); transition:color var(--transition); }
+    .footer-legal a:hover { color:var(--text-primary); }
+    @media(max-width:768px){ .footer-grid{grid-template-columns:1fr;gap:32px;} }
+
+    /* ═══════════════════════════════════════ */
+    /* SCROLL ANIMATIONS                       */
+    /* ═══════════════════════════════════════ */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ═══════════════════════════════════════ */
+    /* LOADING SPINNER                         */
+    /* ═══════════════════════════════════════ */
+    .spinner {
+      width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.7s linear infinite; display: none;
+    }
+    @keyframes spin { to{transform:rotate(360deg)} }
+
+    /* ═══════════════════════════════════════ */
+    /* SECTION BACKGROUNDS                     */
+    /* ═══════════════════════════════════════ */
+    .bg-surface-2 { background: var(--surface-2); }
+
+    /* ═══════════════════════════════════════ */
+    /* CTA SECTION                             */
+    /* ═══════════════════════════════════════ */
+    .cta-section {
+      text-align: center; padding: 100px 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(70,95,255,0.12) 0%, transparent 70%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+    .cta-section p { color: var(--text-secondary); max-width: 500px; margin: 0 auto 36px; font-size:1rem; line-height:1.7; }
+    .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* ═══════════════════════════════════════ */
+    /* FOCUS / ACCESSIBILITY                   */
+    /* ═══════════════════════════════════════ */
+    :focus-visible {
+      outline: 2px solid var(--brand-light);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    .sr-only {
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
+    /* ═══════════════════════════════════════ */
+    /* RESPONSIVE MISC                         */
+    /* ═══════════════════════════════════════ */
+    @media(max-width:480px){
+      .hero-ctas { flex-direction:column; }
+      .btn-lg { width:100%; justify-content:center; }
+    }
+  </style>
+
+  <!-- ═══════════ JSON-LD BreadcrumbList ═══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"LDS Admin","item":"https://ldsadmin.cz/"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ═══════════ GTM NOSCRIPT ═══════════ -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+      height="0" width="0" style="display:none;visibility:hidden" title="GTM"></iframe>
+  </noscript>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COOKIE CONSENT BANNER                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-modal="true">
+    <div class="cookie-title" id="cookie-title" data-cs="🍪 Používáme cookies" data-en="🍪 We use cookies">🍪 Používáme cookies</div>
+    <p class="cookie-text" data-cs="Používáme cookies k analýze návštěvnosti a cílenému marketingu. Vaše soukromí je pro nás důležité." data-en="We use cookies for analytics and targeted marketing. Your privacy matters to us.">
+      Používáme cookies k analýze návštěvnosti a cílenému marketingu. Vaše soukromí je pro nás důležité.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-accept-all" id="cookie-accept-all" data-cs="Přijmout vše" data-en="Accept all">Přijmout vše</button>
+      <button class="btn-necessary" id="cookie-necessary" data-cs="Jen nezbytné" data-en="Necessary only">Jen nezbytné</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- NAVIGATION                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="LDS Admin - Domovská stránka">
+        <div class="logo-icon" aria-hidden="true" >LDS</div>
+        <span>LDS Admin</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#funkce" data-cs="Funkce" data-en="Features">Funkce</a></li>
+        <li><a href="#gis" data-cs="GIS" data-en="GIS">GIS</a></li>
+        <li><a href="#integrace" data-cs="Integrace" data-en="Integrations">Integrace</a></li>
+        <li><a href="#reseni" data-cs="Řešení" data-en="Solutions">Řešení</a></li>
+        <li><a href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Jazyk / Language">
+          <button class="lang-btn active" id="lang-cs" onclick="setLang('cs')" aria-pressed="true" aria-label="Česky">CS</button>
+          <button class="lang-btn" id="lang-en" onclick="setLang('en')" aria-pressed="false" aria-label="English">EN</button>
+        </div>
+        <a href="signin.html" class="btn btn-primary" id="nav-login-btn"
+           onclick="trackEvent('login_click','nav_cta')"
+           data-cs="Přihlásit se" data-en="Sign In">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7"/><polyline points="9 11 12 8 9 5"/><line x1="12" y1="8" x2="4" y2="8"/></svg>
+          Přihlásit se
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobilní menu">
+    <a href="#funkce" onclick="closeMenu()" data-cs="Funkce" data-en="Features">Funkce</a>
+    <a href="#gis" onclick="closeMenu()" data-cs="GIS" data-en="GIS">GIS</a>
+    <a href="#integrace" onclick="closeMenu()" data-cs="Integrace" data-en="Integrations">Integrace</a>
+    <a href="#reseni" onclick="closeMenu()" data-cs="Řešení" data-en="Solutions">Řešení</a>
+    <a href="#kontakt" onclick="closeMenu()" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+    <a href="signin.html" class="btn btn-primary" style="margin-top:8px"
+       data-cs="Přihlásit se" data-en="Sign In">Přihlásit se</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- HERO                                    -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-h1">
+      <div class="hero-bg">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="orb orb-3" aria-hidden="true"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-label reveal">
+              <span class="badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span data-cs="Platforma pro energetiku" data-en="Energy Management Platform">Platforma pro energetiku</span>
+              </span>
+            </div>
+
+            <h1 id="hero-h1" class="hero-h1 reveal reveal-delay-1">
+              <span data-cs="Energetický management" data-en="Energy Management">Energetický management</span>
+              <br/><span class="gradient-text-brand" data-cs="plně pod kontrolou" data-en="fully in control">plně pod kontrolou</span>
+            </h1>
+
+            <p class="hero-sub reveal reveal-delay-2"
+               data-cs="Komplexní platforma pro správu distribučních sítí a budov — monitoring v reálném čase, GIS, správa odběratelů, dispečerský přehled a automatická upozornění na jednom místě."
+               data-en="Comprehensive platform for distribution network and building management — real-time monitoring, GIS, customer management, dispatch overview and automatic alerts in one place.">
+              Komplexní platforma pro správu distribučních sítí a budov — monitoring v reálném čase, GIS, správa odběratelů, dispečerský přehled a automatická upozornění na jednom místě.
+            </p>
+
+            <div class="hero-ctas reveal reveal-delay-3">
+              <a href="signin.html" class="btn btn-primary btn-lg"
+                 id="hero-login-btn"
+                 onclick="trackEvent('login_click','hero_cta')"
+                 data-cs="Přihlásit se" data-en="Sign In">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7"/><polyline points="9 11 12 8 9 5"/><line x1="12" y1="8" x2="4" y2="8"/></svg>
+                Přihlásit se
+              </a>
+              <a href="#kontakt" class="btn btn-ghost btn-lg"
+                 onclick="trackEvent('demo_click','hero_cta')"
+                 data-cs="Zjistit více" data-en="Learn More">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="9"/><circle cx="8" cy="11" r="0.5" fill="currentColor"/></svg>
+                Zjistit více
+              </a>
+            </div>
+
+            <div class="hero-stats reveal">
+              <div class="hero-stat">
+                <div class="hero-stat-val">24/7</div>
+                <div class="hero-stat-label" data-cs="Monitoring" data-en="Monitoring">Monitoring</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-val">Real‑time</div>
+                <div class="hero-stat-label" data-cs="Přenos dat" data-en="Data transfer">Přenos dat</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-val">360°</div>
+                <div class="hero-stat-label" data-cs="Přehled sítě" data-en="Network view">Přehled sítě</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-val">Web</div>
+                <div class="hero-stat-label" data-cs="Přístup odkudkoli" data-en="Access anywhere">Přístup odkudkoli</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal-delay-2">
+            <div class="dashboard-frame" role="img" aria-label="Náhled dashboardu LDS Admin">
+              <!-- Titlebar -->
+              <div class="dash-titlebar">
+                <div class="dash-dots" aria-hidden="true">
+                  <div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div>
+                </div>
+                <div class="dash-url" aria-hidden="true">
+                  <div class="dash-url-dot"></div>
+                  main.ldsadmin.cz
+                </div>
+              </div>
+
+              <!-- Dashboard body -->
+              <div class="dash-content">
+                <div class="dash-sidebar-layout">
+                  <!-- Sidebar -->
+                  <div class="dash-sidebar" aria-hidden="true">
+                    <div class="dash-nav-dot active">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>
+                    </div>
+                    <div class="dash-nav-dot">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 12 6 8 9 10 14 4"/></svg>
+                    </div>
+                    <div class="dash-nav-dot">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><polyline points="8 5 8 8 10 10"/></svg>
+                    </div>
+                    <div class="dash-nav-dot">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2a6 6 0 0 0 0 12h4l2-2v-4a6 6 0 0 0-6-6z"/></svg>
+                    </div>
+                  </div>
+
+                  <!-- Main content -->
+                  <div class="dash-main" aria-hidden="true">
+                    <div class="dash-header-row">
+                      <div class="dash-page-title">Přehled sítě</div>
+                      <div class="dash-status-pill">● Vše online</div>
+                    </div>
+
+                    <!-- Metrics -->
+                    <div class="metric-row">
+                      <div class="metric-card">
+                        <div class="metric-label">Napětí</div>
+                        <div class="metric-val" style="color:#60a5fa">231V</div>
+                        <div class="metric-change">↑ +0.3%</div>
+                      </div>
+                      <div class="metric-card">
+                        <div class="metric-label">Výkon</div>
+                        <div class="metric-val" style="color:#a78bfa">48kW</div>
+                        <div class="metric-change">↑ +2.1%</div>
+                      </div>
+                      <div class="metric-card">
+                        <div class="metric-label">Spotřeba</div>
+                        <div class="metric-val" style="color:#34d399">182kWh</div>
+                        <div class="metric-change down">↓ -0.8%</div>
+                      </div>
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="chart-area">
+                      <div class="chart-label">Spotřeba za 7 dní (kWh)</div>
+                      <div class="chart-bars">
+                        <div class="chart-bar" style="height:40%;background:rgba(70,95,255,0.4)"></div>
+                        <div class="chart-bar" style="height:60%;background:rgba(70,95,255,0.5)"></div>
+                        <div class="chart-bar" style="height:45%;background:rgba(70,95,255,0.4)"></div>
+                        <div class="chart-bar" style="height:80%;background:rgba(70,95,255,0.6)"></div>
+                        <div class="chart-bar" style="height:65%;background:rgba(70,95,255,0.5)"></div>
+                        <div class="chart-bar" style="height:90%;background:var(--brand)"></div>
+                        <div class="chart-bar" style="height:70%;background:rgba(70,95,255,0.5)"></div>
+                      </div>
+                    </div>
+
+                    <!-- Map + alerts -->
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                      <div class="map-preview">
+                        <div class="map-label">GIS – Síť</div>
+                        <div class="map-dots">
+                          <div class="map-dot map-dot-lg" style="top:30%;left:40%"></div>
+                          <div class="map-dot map-dot-sm" style="top:55%;left:60%"></div>
+                          <div class="map-dot map-dot-sm" style="top:20%;left:70%"></div>
+                          <div class="map-dot map-dot-sm" style="top:65%;left:25%"></div>
+                          <div class="map-line" style="top:35%;left:40%;width:35%;transform:rotate(15deg)"></div>
+                          <div class="map-line" style="top:30%;left:58%;width:25%;transform:rotate(-20deg)"></div>
+                          <div class="map-line" style="top:55%;left:25%;width:30%;transform:rotate(-5deg)"></div>
+                        </div>
+                      </div>
+                      <div class="alert-list">
+                        <div class="alert-item">
+                          <div class="alert-dot ok"></div>
+                          <div class="alert-name">TS-01</div>
+                          <div class="alert-val">OK</div>
+                        </div>
+                        <div class="alert-item">
+                          <div class="alert-dot warn"></div>
+                          <div class="alert-name">TS-04</div>
+                          <div class="alert-val">Upozornění</div>
+                        </div>
+                        <div class="alert-item">
+                          <div class="alert-dot ok"></div>
+                          <div class="alert-name">TS-07</div>
+                          <div class="alert-val">OK</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating badge -->
+            <div class="dash-float-badge" aria-hidden="true">
+              <div class="dash-float-icon">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="2 9 6 5 9 8 14 3"/><polyline points="10 3 14 3 14 7"/></svg>
+              </div>
+              <div class="dash-float-text">
+                <div class="dash-float-val">+12.4%</div>
+                <div class="dash-float-label" data-cs="Efektivita sítě" data-en="Network efficiency">Efektivita sítě</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TRUST BAR                               -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="trust" aria-label="Klíčové vlastnosti platformy">
+      <div class="trust-bar">
+        <div class="trust-track" aria-hidden="true">
+          <!-- duplicated for infinite scroll -->
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><polyline points="5 8 7 10 11 6"/></svg> 99.9% Dostupnost</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg> ISO 27001 Bezpečnost</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2l1.5 4.5H14l-3.5 2.5L12 14 8 11l-4 3 1.5-5L2 6.5h4.5z"/></svg> GDPR Soulad</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 12 6 8 9 10 14 4"/></svg> Real-time Monitoring</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><line x1="8" y1="1" x2="8" y2="3"/><line x1="8" y1="13" x2="8" y2="15"/><line x1="1" y1="8" x2="3" y2="8"/><line x1="13" y1="8" x2="15" y2="8"/></svg> Vlastní PLC hardware</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12V5l6-3 6 3v7l-6 3-6-3z"/></svg> IEC 61968 Standard</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="14" height="10" rx="1"/><line x1="1" y1="7" x2="15" y2="7"/></svg> Webový přístup 24/7</div>
+          <div class="trust-separator"></div>
+          <!-- duplicate -->
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><polyline points="5 8 7 10 11 6"/></svg> 99.9% Dostupnost</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg> ISO 27001 Bezpečnost</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2l1.5 4.5H14l-3.5 2.5L12 14 8 11l-4 3 1.5-5L2 6.5h4.5z"/></svg> GDPR Soulad</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 12 6 8 9 10 14 4"/></svg> Real-time Monitoring</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><line x1="8" y1="1" x2="8" y2="3"/><line x1="8" y1="13" x2="8" y2="15"/><line x1="1" y1="8" x2="3" y2="8"/><line x1="13" y1="8" x2="15" y2="8"/></svg> Vlastní PLC hardware</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12V5l6-3 6 3v7l-6 3-6-3z"/></svg> IEC 61968 Standard</div>
+          <div class="trust-separator"></div>
+          <div class="trust-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="14" height="10" rx="1"/><line x1="1" y1="7" x2="15" y2="7"/></svg> Webový přístup 24/7</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- FEATURES                                -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="funkce" class="section" aria-labelledby="features-h2">
+      <div class="container">
+        <div class="section-label reveal" data-cs="Funkce platformy" data-en="Platform Features">Funkce platformy</div>
+        <h2 id="features-h2" class="reveal" style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;max-width:600px;"
+            data-cs="Vše pro správu energetiky na jednom místě"
+            data-en="Everything for energy management in one place">
+          Vše pro správu energetiky na jednom místě
+        </h2>
+        <p class="reveal" style="color:var(--text-secondary);max-width:560px;margin-bottom:52px;font-size:1.05rem;line-height:1.7"
+           data-cs="Od monitoringu v reálném čase až po správu dokumentace a přidělování úkolů."
+           data-en="From real-time monitoring to documentation management and task assignment.">
+          Od monitoringu v reálném čase až po správu dokumentace a přidělování úkolů.
+        </p>
+
+        <div class="features-grid reveal">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Data v reálném čase" data-en="Real-time Data">Data v reálném čase</h3>
+            <p class="feature-p" data-cs="Přehledné dashboardy s okamžitou aktualizací měřených hodnot — napětí, proud, výkon a spotřeba. Okamžitý přehled o celém stavu sítě." data-en="Clear dashboards with instant updates of measured values — voltage, current, power and consumption. Immediate overview of the entire network status.">Přehledné dashboardy s okamžitou aktualizací měřených hodnot — napětí, proud, výkon a spotřeba.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Automatická upozornění" data-en="Automatic Alerts">Automatická upozornění</h3>
+            <p class="feature-p" data-cs="Automatické alerty při překročení limitů nebo detekci výpadku. Systém okamžitě notifikuje zodpovědné osoby." data-en="Automatic alerts when limits are exceeded or failure detected. The system immediately notifies responsible persons.">Automatické alerty při překročení limitů nebo detekci výpadku. Okamžitá notifikace.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Hlídání revizí" data-en="Inspection Tracking">Hlídání revizí</h3>
+            <p class="feature-p" data-cs="Automatická kontrola termínů pravidelných revizí. Protokoly a certifikáty přímo ke konkrétním zařízením." data-en="Automatic control of regular inspection dates. Protocols and certificates directly linked to specific devices.">Automatická kontrola termínů revizí. Protokoly a certifikáty ke konkrétním zařízením.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Správa odběratelů" data-en="Customer Management">Správa odběratelů</h3>
+            <p class="feature-p" data-cs="Evidence odběratelů, smluv a dokumentů k odběrným místům. Kompletní přehled zákazníků a jejich spotřeby." data-en="Records of customers, contracts and documents at supply points. Complete overview of customers and their consumption.">Evidence odběratelů, smluv a dokumentů k odběrným místům. Kompletní přehled zákazníků.</p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Dispečerský přehled" data-en="Dispatch Overview">Dispečerský přehled</h3>
+            <p class="feature-p" data-cs="Přidělování úkolů technikům, sledování jejich plnění v terénu a evidence provedených operací." data-en="Task assignment to technicians, tracking their progress in the field and recording completed operations.">Přidělování úkolů technikům, sledování plnění v terénu a evidence provedených operací.</p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="feature-h3" data-cs="Reporting a analytika" data-en="Reporting & Analytics">Reporting a analytika</h3>
+            <p class="feature-p" data-cs="Archiv měření, analýza trendů, export reportů. Identifikace neefektivit a historická data pro rozhodování." data-en="Measurement archive, trend analysis, report export. Identification of inefficiencies and historical data for decision-making.">Archiv měření, analýza trendů a export reportů. Identifikace neefektivit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- GIS SECTION                             -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="gis" class="section bg-surface-2" aria-labelledby="gis-h2">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+          <div>
+            <div class="section-label reveal" data-cs="GIS & Mapové podklady" data-en="GIS & Map Layers">GIS & Mapové podklady</div>
+            <h2 id="gis-h2" class="reveal" style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:18px"
+                data-cs="Vizualizujte svou síť na mapě"
+                data-en="Visualize your network on the map">Vizualizujte svou síť na mapě</h2>
+            <p class="reveal" style="color:var(--text-secondary);line-height:1.7;margin-bottom:32px"
+               data-cs="Interaktivní GIS mapové podklady pro přesné zakreslení a správu energetických i datových sítí."
+               data-en="Interactive GIS map layers for precise mapping and management of energy and data networks.">
+              Interaktivní GIS mapové podklady pro přesné zakreslení a správu energetických i datových sítí.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:16px" class="reveal">
+              <div class="glass" style="padding:20px 24px;display:flex;align-items:flex-start;gap:14px">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-glow);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-light)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:700;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;margin-bottom:4px" data-cs="Přesná vizualizace infrastruktury" data-en="Precise infrastructure visualization">Přesná vizualizace infrastruktury</div>
+                  <div style="font-size:0.87rem;color:var(--text-secondary)" data-cs="Energetické i datové sítě zobrazeny přímo v terénu — přesná poloha každého prvku." data-en="Energy and data networks shown directly in the field — precise location of every element.">Energetické i datové sítě zobrazeny přímo v terénu — přesná poloha každého prvku.</div>
+                </div>
+              </div>
+              <div class="glass" style="padding:20px 24px;display:flex;align-items:flex-start;gap:14px">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-glow);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-light)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:700;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;margin-bottom:4px" data-cs="Ruční zakreslování sítí" data-en="Manual network drawing">Ruční zakreslování sítí</div>
+                  <div style="font-size:0.87rem;color:var(--text-secondary)" data-cs="Intuitivní nástroje pro zakreslování tras vedení, odběrných míst a rozvoden." data-en="Intuitive tools for drawing line routes, supply points and substations.">Intuitivní nástroje pro zakreslování tras vedení, odběrných míst a rozvoden.</div>
+                </div>
+              </div>
+              <div class="glass" style="padding:20px 24px;display:flex;align-items:flex-start;gap:14px">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-glow);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-light)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:700;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;margin-bottom:4px" data-cs="Import geodetických dat" data-en="Geodetic data import">Import geodetických dat</div>
+                  <div style="font-size:0.87rem;color:var(--text-secondary)" data-cs="Import přímo z geodetických podkladů — rychlé a přesné zanesení bez ručního zakreslování." data-en="Import directly from geodetic data — fast and accurate insertion without manual drawing.">Import přímo z geodetických podkladů — rychlé zanesení bez ručního zakreslování.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- GIS Map Visual -->
+          <div class="reveal reveal-delay-2">
+            <div class="glass" style="padding:24px;border-radius:var(--radius-xl);overflow:hidden">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem">GIS Mapa sítě</div>
+                <div style="font-size:0.72rem;background:rgba(70,95,255,0.15);color:var(--brand-light);padding:3px 10px;border-radius:100px;border:1px solid rgba(70,95,255,0.2)">Live</div>
+              </div>
+              <!-- SVG Map Visualization -->
+              <div style="background:var(--surface-4);border-radius:var(--radius);position:relative;height:320px;overflow:hidden">
+                <svg width="100%" height="100%" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Grid bg -->
+                  <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(70,95,255,0.07)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="400" height="320" fill="url(#grid)"/>
+                  <!-- Network lines -->
+                  <line x1="80" y1="160" x2="160" y2="100" stroke="rgba(70,95,255,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+                  <line x1="160" y1="100" x2="260" y2="80" stroke="rgba(70,95,255,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+                  <line x1="260" y1="80" x2="320" y2="140" stroke="rgba(70,95,255,0.35)" stroke-width="2" stroke-dasharray="6,3"/>
+                  <line x1="160" y1="100" x2="200" y2="200" stroke="rgba(70,95,255,0.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+                  <line x1="200" y1="200" x2="300" y2="240" stroke="rgba(70,95,255,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
+                  <line x1="80" y1="160" x2="120" y2="240" stroke="rgba(70,95,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3"/>
+                  <!-- Main node -->
+                  <circle cx="160" cy="100" r="12" fill="rgba(70,95,255,0.2)" stroke="#465FFF" stroke-width="2"/>
+                  <circle cx="160" cy="100" r="5" fill="#465FFF"/>
+                  <circle cx="160" cy="100" r="20" fill="none" stroke="rgba(70,95,255,0.3)" stroke-width="1">
+                    <animate attributeName="r" values="12;24;12" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+                  <!-- Sub nodes -->
+                  <circle cx="80" cy="160" r="7" fill="rgba(70,95,255,0.15)" stroke="#6b82ff" stroke-width="1.5"/>
+                  <circle cx="80" cy="160" r="3" fill="#6b82ff"/>
+                  <circle cx="260" cy="80" r="7" fill="rgba(70,95,255,0.15)" stroke="#6b82ff" stroke-width="1.5"/>
+                  <circle cx="260" cy="80" r="3" fill="#6b82ff"/>
+                  <circle cx="320" cy="140" r="7" fill="rgba(70,95,255,0.15)" stroke="#6b82ff" stroke-width="1.5"/>
+                  <circle cx="320" cy="140" r="3" fill="#6b82ff"/>
+                  <circle cx="200" cy="200" r="6" fill="rgba(70,95,255,0.1)" stroke="rgba(107,130,255,0.5)" stroke-width="1"/>
+                  <circle cx="300" cy="240" r="5" fill="rgba(70,95,255,0.1)" stroke="rgba(107,130,255,0.5)" stroke-width="1"/>
+                  <circle cx="120" cy="240" r="5" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.6)" stroke-width="1.5"/>
+                  <!-- Labels -->
+                  <text x="170" y="97" fill="rgba(255,255,255,0.7)" font-size="9" font-family="Inter, sans-serif">RS-01</text>
+                  <text x="90" y="158" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter, sans-serif">TS-04</text>
+                  <text x="269" y="77" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter, sans-serif">TS-07</text>
+                  <text x="330" y="137" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter, sans-serif">TS-12</text>
+                  <text x="125" y="255" fill="rgba(245,158,11,0.8)" font-size="8" font-family="Inter, sans-serif">⚠ TS-03</text>
+                </svg>
+                <!-- Legend -->
+                <div style="position:absolute;bottom:12px;left:12px;display:flex;gap:12px;font-size:0.65rem;color:var(--text-muted)">
+                  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--brand)"></div> Rozvodna</div>
+                  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--brand-light)"></div> Trafostanice</div>
+                  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:var(--warning)"></div> Upozornění</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>@media(max-width:900px){#gis .container > div{grid-template-columns:1fr !important;} }</style>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TARGET USERS                            -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="reseni" class="section" aria-labelledby="users-h2">
+      <div class="container">
+        <div class="section-label reveal" data-cs="Pro koho" data-en="Who it's for">Pro koho</div>
+        <h2 id="users-h2" class="reveal" style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px"
+            data-cs="LDS Admin je určen pro vás"
+            data-en="LDS Admin is designed for you">LDS Admin je určen pro vás</h2>
+        <p class="reveal" style="color:var(--text-secondary);margin-bottom:48px;max-width:540px;font-size:1.05rem;line-height:1.7"
+           data-cs="Platforma pokrývá potřeby různých typů organizací pracujících s energetickou infrastrukturou."
+           data-en="The platform covers the needs of various types of organizations working with energy infrastructure.">
+          Platforma pokrývá potřeby různých typů organizací pracujících s energetickou infrastrukturou.
+        </p>
+
+        <div class="users-grid reveal">
+          <div class="user-card glass glass-hover">
+            <div class="user-card-num">01</div>
+            <div class="user-icon" style="background:rgba(70,95,255,0.12);border:1px solid rgba(70,95,255,0.2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-light)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="user-h3" data-cs="Správci budov" data-en="Building Managers">Správci budov</h3>
+            <p class="user-p" data-cs="Přehled energetického hospodářství, správa odběrných míst a automatické hlídání termínů revizí." data-en="Overview of energy management, supply point management and automatic monitoring of inspection deadlines.">Přehled energetického hospodářství, správa odběrných míst a automatické hlídání termínů revizí.</p>
+            <div class="user-tags">
+              <span class="user-tag" data-cs="Monitoring" data-en="Monitoring">Monitoring</span>
+              <span class="user-tag" data-cs="Revize" data-en="Inspections">Revize</span>
+              <span class="user-tag" data-cs="Reporting" data-en="Reporting">Reporting</span>
+            </div>
+          </div>
+
+          <div class="user-card glass glass-hover">
+            <div class="user-card-num">02</div>
+            <div class="user-icon" style="background:rgba(167,139,250,0.12);border:1px solid rgba(167,139,250,0.2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="user-h3" data-cs="Distribuční společnosti" data-en="Distribution Companies">Distribuční společnosti</h3>
+            <p class="user-p" data-cs="Stav sítě v reálném čase, rychlá detekce výpadků, GIS vizualizace a kompletní evidence odběratelů." data-en="Real-time network status, fast outage detection, GIS visualization and complete customer records.">Stav sítě v reálném čase, rychlá detekce výpadků, GIS vizualizace a kompletní evidence odběratelů.</p>
+            <div class="user-tags">
+              <span class="user-tag" data-cs="GIS" data-en="GIS">GIS</span>
+              <span class="user-tag" data-cs="Výpadky" data-en="Outages">Výpadky</span>
+              <span class="user-tag" data-cs="Odběratelé" data-en="Customers">Odběratelé</span>
+            </div>
+          </div>
+
+          <div class="user-card glass glass-hover">
+            <div class="user-card-num">03</div>
+            <div class="user-icon" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="user-h3" data-cs="Servisní týmy" data-en="Service Teams">Servisní týmy</h3>
+            <p class="user-p" data-cs="Správa úkolů, evidence servisních zásahů a provozní dokumentace. Mobilní přístup odkudkoli v terénu." data-en="Task management, service intervention records and operational documentation. Mobile access from anywhere in the field.">Správa úkolů, evidence servisních zásahů a provozní dokumentace. Mobilní přístup z terénu.</p>
+            <div class="user-tags">
+              <span class="user-tag" data-cs="Úkoly" data-en="Tasks">Úkoly</span>
+              <span class="user-tag" data-cs="Mobilní přístup" data-en="Mobile access">Mobilní přístup</span>
+              <span class="user-tag" data-cs="Dokumentace" data-en="Documentation">Dokumentace</span>
+            </div>
+          </div>
+
+          <div class="user-card glass glass-hover">
+            <div class="user-card-num">04</div>
+            <div class="user-icon" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="user-h3" data-cs="Energetičtí manažeři" data-en="Energy Managers">Energetičtí manažeři</h3>
+            <p class="user-p" data-cs="Analýza spotřeby, detailní reporty a identifikace neefektivit. Data pro strategické rozhodování." data-en="Consumption analysis, detailed reports and identification of inefficiencies. Data for strategic decision-making.">Analýza spotřeby, detailní reporty a identifikace neefektivit v hospodaření.</p>
+            <div class="user-tags">
+              <span class="user-tag" data-cs="Analytika" data-en="Analytics">Analytika</span>
+              <span class="user-tag" data-cs="Optimalizace" data-en="Optimization">Optimalizace</span>
+              <span class="user-tag" data-cs="Export dat" data-en="Data export">Export dat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- INTEGRATIONS                            -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="integrace" class="section" style="background:var(--surface-2)" aria-labelledby="int-h2">
+      <div class="container">
+        <div class="section-label reveal" data-cs="Integrace & Hardware" data-en="Integrations & Hardware">Integrace & Hardware</div>
+        <h2 id="int-h2" class="reveal" style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px"
+            data-cs="Připojte cokoliv, co umí komunikovat"
+            data-en="Connect anything that can communicate">Připojte cokoliv, co umí komunikovat</h2>
+        <p class="reveal" style="color:var(--text-secondary);max-width:540px;margin-bottom:8px;font-size:1.05rem;line-height:1.7"
+           data-cs="Otevřená platforma bez vendor lock-in — integruje se s průmyslovými systémy, cloudovými platformami i vlastním hardwarem."
+           data-en="Open platform without vendor lock-in — integrates with industrial systems, cloud platforms and custom hardware.">
+          Otevřená platforma bez vendor lock-in.
+        </p>
+
+        <div class="integrations-grid reveal">
+          <div class="integration-card">
+            <div class="int-icon" style="background:rgba(70,95,255,0.1)">⚡</div>
+            <div class="int-name">Mervis</div>
+            <div class="int-desc" data-cs="Přímé napojení na PLC řízené platformou Mervis bez konfigurace." data-en="Direct connection to Mervis-controlled PLCs without configuration.">Přímé napojení na PLC řízené platformou Mervis bez konfigurace.</div>
+            <div class="int-badge native" data-cs="Nativní podpora" data-en="Native support">Nativní podpora</div>
+          </div>
+          <div class="integration-card">
+            <div class="int-icon" style="background:rgba(34,197,94,0.1)">🏭</div>
+            <div class="int-name">SCADA</div>
+            <div class="int-desc" data-cs="Napojení na otevřené SCADA systémy a agregace dat do jednotného přehledu." data-en="Connection to open SCADA systems and data aggregation into a unified overview.">Napojení na SCADA systémy a agregace dat do jednotného přehledu.</div>
+            <div class="int-badge native" data-cs="Nativní podpora" data-en="Native support">Nativní podpora</div>
+          </div>
+          <div class="integration-card">
+            <div class="int-icon" style="background:rgba(167,139,250,0.1)">🔌</div>
+            <div class="int-name">API</div>
+            <div class="int-desc" data-cs="Připojení libovolného zařízení nebo systému disponujícího komunikačním API." data-en="Connection of any device or system with a communication API.">Připojení libovolného zařízení s komunikačním API.</div>
+            <div class="int-badge supported" data-cs="Podporováno" data-en="Supported">Podporováno</div>
+          </div>
+          <div class="integration-card">
+            <div class="int-icon" style="background:rgba(245,158,11,0.1)">🔧</div>
+            <div class="int-name" data-cs="Vlastní PLC" data-en="Custom PLC">Vlastní PLC</div>
+            <div class="int-desc" data-cs="Vlastní řada PLC navržených přímo pro ekosystém LDS Admin pro maximální spolehlivost." data-en="Custom PLC series designed specifically for the LDS Admin ecosystem for maximum reliability.">Vlastní PLC navržené pro ekosystém LDS Admin.</div>
+            <div class="int-badge custom" data-cs="Vlastní výroba" data-en="In-house">Vlastní výroba</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- FAQ                                     -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="faq" class="section" aria-labelledby="faq-h2">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:52px">
+          <div class="section-label reveal" style="justify-content:center" data-cs="Časté dotazy" data-en="FAQ">Časté dotazy</div>
+          <h2 id="faq-h2" class="reveal" style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:12px"
+              data-cs="Máte otázky? Máme odpovědi."
+              data-en="Have questions? We have answers.">Máte otázky? Máme odpovědi.</h2>
+        </div>
+
+        <div class="faq-list reveal" id="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              <span data-cs="Co je LDS Admin a pro koho je určen?" data-en="What is LDS Admin and who is it for?">Co je LDS Admin a pro koho je určen?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-cs="LDS Admin je komplexní webová platforma pro energetický management distribučních sítí a budov. Je určena pro správce budov, distribuční společnosti, servisní týmy a energetické manažery, kteří potřebují mít přehled o své energetické infrastruktuře." data-en="LDS Admin is a comprehensive web platform for energy management of distribution networks and buildings. It is designed for building managers, distribution companies, service teams and energy managers who need an overview of their energy infrastructure.">
+                LDS Admin je komplexní webová platforma pro energetický management distribučních sítí a budov. Je určena pro správce budov, distribuční společnosti, servisní týmy a energetické manažery.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              <span data-cs="S jakými systémy se LDS Admin integruje?" data-en="What systems does LDS Admin integrate with?">S jakými systémy se LDS Admin integruje?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-cs="LDS Admin se nativně integruje s platformou Mervis a SCADA systémy. Prostřednictvím univerzálního API lze připojit libovolný průmyslový systém nebo hardware. Nabízíme také vlastní řadu PLC navržených přímo pro náš ekosystém." data-en="LDS Admin natively integrates with the Mervis platform and SCADA systems. Any industrial system or hardware can be connected via the universal API. We also offer our own PLC series designed specifically for our ecosystem.">
+                LDS Admin se nativně integruje s platformou Mervis a SCADA systémy. Prostřednictvím API lze připojit libovolný systém nebo hardware.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              <span data-cs="Je systém dostupný 24/7 a jak je zabezpečen?" data-en="Is the system available 24/7 and how is it secured?">Je systém dostupný 24/7 a jak je zabezpečen?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-cs="Ano, systém je dostupný 24/7 přes webový prohlížeč odkudkoli. Platforma splňuje požadavky GDPR a je navržena s důrazem na bezpečnost dat a spolehlivost provozu." data-en="Yes, the system is available 24/7 via a web browser from anywhere. The platform complies with GDPR and is designed with emphasis on data security and operational reliability.">
+                Ano, systém je dostupný 24/7 přes webový prohlížeč. Platforma splňuje GDPR a je navržena s důrazem na bezpečnost a spolehlivost.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              <span data-cs="Jak mohu LDS Admin vyzkoušet?" data-en="How can I try LDS Admin?">Jak mohu LDS Admin vyzkoušet?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-cs="Kontaktujte nás prostřednictvím formuláře níže nebo e-mailem na support@ldsadmin.cz. Rádi vám ukážeme, jak platforma funguje v praxi a jak ji přizpůsobit vašim konkrétním potřebám." data-en="Contact us via the form below or by email at support@ldsadmin.cz. We will be happy to show you how the platform works in practice and how to customize it for your specific needs.">
+                Kontaktujte nás přes formulář nebo na support@ldsadmin.cz. Rádi vám ukážeme platformu v praxi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- CTA BANNER                              -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="cta-section">
+      <div class="container">
+        <div class="badge reveal" style="margin:0 auto 24px;width:fit-content">
+          <span class="badge-dot"></span>
+          <span data-cs="Připraveni začít?" data-en="Ready to start?">Připraveni začít?</span>
+        </div>
+        <h2 class="reveal reveal-delay-1"
+            data-cs="Vezměte energetiku plně pod kontrolu"
+            data-en="Take energy management fully under control">
+          Vezměte energetiku plně pod kontrolu
+        </h2>
+        <p class="reveal reveal-delay-2"
+           data-cs="Zjistěte, jak LDS Admin funguje ve vaší infrastruktuře. Kontaktujte nás ještě dnes."
+           data-en="Find out how LDS Admin works in your infrastructure. Contact us today.">
+          Zjistěte, jak LDS Admin funguje ve vaší infrastruktuře. Kontaktujte nás ještě dnes.
+        </p>
+        <div class="cta-buttons reveal reveal-delay-3">
+          <a href="#kontakt" class="btn btn-primary btn-lg"
+             onclick="trackEvent('demo_click','cta_banner')"
+             data-cs="Kontaktovat nás" data-en="Contact Us">Kontaktovat nás</a>
+          <a href="signin.html" class="btn btn-ghost btn-lg"
+             onclick="trackEvent('login_click','cta_banner')"
+             data-cs="Přihlásit se" data-en="Sign In">Přihlásit se</a>
+        </div>
+      </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- CONTACT                                 -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="kontakt" class="section" aria-labelledby="contact-h2">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info reveal">
+            <div class="section-label" data-cs="Kontakt" data-en="Contact">Kontakt</div>
+            <h2 id="contact-h2" data-cs="Napište nám" data-en="Write to us">Napište nám</h2>
+            <p data-cs="Máte zájem o LDS Admin nebo chcete vědět více? Pošlete nám zprávu a my se vám ozveme zpět co nejdříve."
+               data-en="Interested in LDS Admin or want to know more? Send us a message and we'll get back to you as soon as possible.">
+              Máte zájem o LDS Admin nebo chcete vědět více? Pošlete nám zprávu a my se vám ozveme zpět co nejdříve.
+            </p>
+            <div class="contact-details">
+              <a href="mailto:support@ldsadmin.cz" class="contact-detail"
+                 onclick="trackEvent('email_click','contact')">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="contact-detail-label" data-cs="E-mail" data-en="Email">E-mail</div>
+                  <div class="contact-detail-val">support@ldsadmin.cz</div>
+                </div>
+              </a>
+              <div class="contact-detail">
+                <div class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="contact-detail-label" data-cs="Sídlo" data-en="Location">Sídlo</div>
+                  <div class="contact-detail-val" data-cs="Česká republika" data-en="Czech Republic">Česká republika</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="reveal reveal-delay-2">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Kontaktní formulář">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cf-name">
+                    <span data-cs="Jméno" data-en="Name">Jméno</span>
+                    <span class="req" aria-hidden="true"> *</span>
+                  </label>
+                  <input type="text" id="cf-name" name="name" required autocomplete="name"
+                         placeholder="Jan Novák" aria-required="true" />
+                  <span class="field-error" id="err-name" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="cf-email">
+                    <span data-cs="E-mail" data-en="Email">E-mail</span>
+                    <span class="req" aria-hidden="true"> *</span>
+                  </label>
+                  <input type="email" id="cf-email" name="email" required autocomplete="email"
+                         placeholder="jan@spolecnost.cz" aria-required="true" />
+                  <span class="field-error" id="err-email" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="cf-company">
+                    <span data-cs="Společnost" data-en="Company">Společnost</span>
+                  </label>
+                  <input type="text" id="cf-company" name="company" autocomplete="organization"
+                         placeholder="Vaše společnost s.r.o." />
+                </div>
+                <div class="form-group">
+                  <label for="cf-phone">
+                    <span data-cs="Telefon" data-en="Phone">Telefon</span>
+                  </label>
+                  <input type="tel" id="cf-phone" name="phone" autocomplete="tel"
+                         placeholder="+420 123 456 789" />
+                </div>
+                <div class="form-group full">
+                  <label for="cf-message">
+                    <span data-cs="Zpráva" data-en="Message">Zpráva</span>
+                    <span class="req" aria-hidden="true"> *</span>
+                  </label>
+                  <textarea id="cf-message" name="message" required
+                            placeholder="Popište vaše potřeby..." aria-required="true"></textarea>
+                  <span class="field-error" id="err-message" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                  <span id="submit-text" data-cs="Odeslat zprávu" data-en="Send Message">Odeslat zprávu</span>
+                  <div class="spinner" id="submit-spinner" aria-hidden="true"></div>
+                  <svg id="submit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+              <div class="form-msg" id="form-success" role="status" aria-live="polite"
+                   data-cs="✓ Zpráva odeslána! Ozveme se vám co nejdříve."
+                   data-en="✓ Message sent! We'll get back to you as soon as possible.">
+                ✓ Zpráva odeslána! Ozveme se vám co nejdříve.
+              </div>
+            <!--   <div class="form-msg error" id="form-error" role="alert" aria-live="assertive"
+                   data-cs="✗ Odeslání se nezdařilo. Prosím zkuste to znovu nebo nás kontaktujte e-mailem."
+                   data-en="✗ Sending failed. Please try again or contact us by email.">
+                ✗ Odeslání se nezdařilo. Prosím zkuste to znovu nebo nás kontaktujte e-mailem.
+              </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER                                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" aria-label="LDS Admin" style="display:inline-flex">
+            <div class="logo-icon" aria-hidden="true">LDS</div>
+            <span>LDS Admin</span>
+          </a>
+          <p data-cs="Komplexní platforma pro energetický management distribučních sítí a budov — monitoring, GIS, správa odběratelů a automatizace na jednom místě."
+             data-en="Comprehensive platform for energy management of distribution networks and buildings — monitoring, GIS, customer management and automation in one place.">
+            Komplexní platforma pro energetický management distribučních sítí a budov.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title" data-cs="Platforma" data-en="Platform">Platforma</div>
+          <ul class="footer-links">
+            <li><a href="#funkce" data-cs="Funkce" data-en="Features">Funkce</a></li>
+            <li><a href="#gis" data-cs="GIS & Mapy" data-en="GIS & Maps">GIS & Mapy</a></li>
+            <li><a href="#integrace" data-cs="Integrace" data-en="Integrations">Integrace</a></li>
+            <li><a href="#reseni" data-cs="Řešení" data-en="Solutions">Řešení</a></li>
+            <li><a href="signin.html" data-cs="Přihlásit se" data-en="Sign In">Přihlásit se</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title" data-cs="Firma" data-en="Company">Firma</div>
+          <ul class="footer-links">
+            <li><a href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a></li>
+            <li><a href="#faq" data-cs="FAQ" data-en="FAQ">FAQ</a></li>
+            <li><a href="mailto:support@ldsadmin.cz">support@ldsadmin.cz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 LDS Admin. <span data-cs="Všechna práva vyhrazena." data-en="All rights reserved.">Všechna práva vyhrazena || Designed By Developer Nayem.</span></div>
+        <div class="footer-legal">
+          <a href="#" data-cs="Ochrana osobních údajů" data-en="Privacy Policy">Ochrana osobních údajů</a>
+          <a href="#" data-cs="Podmínky použití" data-en="Terms of Use">Podmínky použití</a>
+          <a href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- JAVASCRIPT                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <script>
+  // ═══════════ DATAAYER HELPER ═══════════
+  function trackEvent(event, location, extra) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: event,
+      event_location: location,
+      language: currentLang,
+      ...extra
+    });
+  }
+
+  // ═══════════ LANGUAGE ═══════════
+  var currentLang = localStorage.getItem('ldsadmin_lang') || 'cs';
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('ldsadmin_lang', lang);
+
+    // Update html lang
+    document.documentElement.lang = lang;
+
+    // Update all [data-cs] / [data-en] elements
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+      var text = el.getAttribute('data-' + lang);
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = text;
+      } else {
+        el.textContent = text;
+      }
+    });
+
+    // Update button states
+    document.getElementById('lang-cs').classList.toggle('active', lang === 'cs');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('lang-cs').setAttribute('aria-pressed', lang === 'cs');
+    document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en');
+
+    // Update meta
+    var titles = { cs: 'LDS Admin – Energetický management distribučních sítí', en: 'LDS Admin – Energy Management Platform' };
+    var descs = { cs: 'Komplexní platforma pro energetický management budov a distribučních sítí.', en: 'Comprehensive platform for energy management of distribution networks and buildings.' };
+    var locales = { cs: 'cs_CZ', en: 'en_US' };
+
+    document.getElementById('meta-title').textContent = titles[lang];
+    document.title = titles[lang];
+    document.getElementById('meta-desc').content = descs[lang];
+    document.getElementById('og-title').content = titles[lang];
+    document.getElementById('og-desc').content = descs[lang];
+    document.getElementById('og-locale').content = locales[lang];
+    document.getElementById('tw-title').content = titles[lang];
+    document.getElementById('tw-desc').content = descs[lang];
+
+    // Track language switch
+    trackEvent('language_switch', 'header', { new_language: lang });
+  }
+
+  // Init on load
+  document.addEventListener('DOMContentLoaded', function() {
+    setLang(currentLang);
+  });
+
+  // ═══════════ NAVBAR SCROLL ═══════════
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // ═══════════ MOBILE MENU ═══════════
+  var toggle = document.getElementById('nav-toggle');
+  var mobileMenu = document.getElementById('nav-mobile');
+  var menuOpen = false;
+
+  toggle.addEventListener('click', function() {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    toggle.setAttribute('aria-expanded', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  });
+
+  function closeMenu() {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // Close on escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && menuOpen) closeMenu();
+  });
+
+  // ═══════════ FAQ ACCORDION ═══════════
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+
+    // Open clicked if was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+
+  // ═══════════ SCROLL REVEAL ═══════════
+  var revealEls = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(function(el) { observer.observe(el); });
+
+  // ═══════════ SCROLL DEPTH TRACKING ═══════════
+  var scrollMilestones = { 25: false, 50: false, 75: false, 100: false };
+  window.addEventListener('scroll', function() {
+    var pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    [25, 50, 75, 100].forEach(function(m) {
+      if (pct >= m && !scrollMilestones[m]) {
+        scrollMilestones[m] = true;
+        trackEvent('scroll_depth', 'page', { scroll_percent: m });
+      }
+    });
+  }, { passive: true });
+
+  // ═══════════ COOKIE CONSENT ═══════════
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem('ldsadmin_consent');
+  if (consent) {
+    banner.classList.add('hidden');
+    applyConsent(JSON.parse(consent));
+  }
+
+  document.getElementById('cookie-accept-all').addEventListener('click', function() {
+    var c = { analytics: true, marketing: true };
+    localStorage.setItem('ldsadmin_consent', JSON.stringify(c));
+    banner.classList.add('hidden');
+    applyConsent(c);
+    trackEvent('cookie_consent', 'banner', { consent_type: 'all' });
+  });
+
+  document.getElementById('cookie-necessary').addEventListener('click', function() {
+    var c = { analytics: false, marketing: false };
+    localStorage.setItem('ldsadmin_consent', JSON.stringify(c));
+    banner.classList.add('hidden');
+    applyConsent(c);
+    trackEvent('cookie_consent', 'banner', { consent_type: 'necessary' });
+  });
+
+  function applyConsent(c) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'update', {
+      'ad_storage': c.marketing ? 'granted' : 'denied',
+      'ad_user_data': c.marketing ? 'granted' : 'denied',
+      'ad_personalization': c.marketing ? 'granted' : 'denied',
+      'analytics_storage': c.analytics ? 'granted' : 'denied'
+    });
+  }
+
+  // ═══════════ CONTACT FORM ═══════════
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById('cf-name');
+    var email = document.getElementById('cf-email');
+    var message = document.getElementById('cf-message');
+    var valid = true;
+
+    // Clear errors
+    ['cf-name','cf-email','cf-message'].forEach(function(id) {
+      document.getElementById(id).classList.remove('error-field');
+    });
+    ['err-name','err-email','err-message'].forEach(function(id) {
+      document.getElementById(id).textContent = '';
+    });
+    document.getElementById('form-success').style.display = 'none';
+    document.getElementById('form-error').style.display = 'none';
+
+    // Validate
+    var errMsgs = { cs: { req: 'Toto pole je povinné.', email: 'Zadejte platný e-mail.' }, en: { req: 'This field is required.', email: 'Enter a valid email.' } };
+    var lang = currentLang;
+
+    if (!name.value.trim()) {
+      name.classList.add('error-field');
+      document.getElementById('err-name').textContent = errMsgs[lang].req;
+      valid = false;
+    }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.classList.add('error-field');
+      document.getElementById('err-email').textContent = errMsgs[lang].email;
+      valid = false;
+    }
+    if (!message.value.trim()) {
+      message.classList.add('error-field');
+      document.getElementById('err-message').textContent = errMsgs[lang].req;
+      valid = false;
+    }
+    if (!valid) return;
+
+    // Loading state
+    var btn = document.getElementById('submit-btn');
+    var spinner = document.getElementById('submit-spinner');
+    var icon = document.getElementById('submit-icon');
+    btn.disabled = true;
+    spinner.style.display = 'block';
+    icon.style.display = 'none';
+
+    try {
+      var payload = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        company: document.getElementById('cf-company').value.trim(),
+        phone: document.getElementById('cf-phone').value.trim(),
+        message: message.value.trim(),
+        lang: currentLang
+      };
+
+      var res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        document.getElementById('form-success').style.display = 'block';
+        document.getElementById('contact-form').reset();
+        trackEvent('form_submit', 'contact_form', { form_name: 'contact' });
+      } else {
+        throw new Error('Server error ' + res.status);
+      }
+    } catch(err) {
+      document.getElementById('form-error').style.display = 'block';
+      trackEvent('form_error', 'contact_form', { error: err.message });
+    } finally {
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      icon.style.display = 'block';
+    }
+  });
+
+  // ═══════════ LOGIN CLICK TRACKING ═══════════
+  document.querySelectorAll('[id*="login-btn"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      trackEvent('login_click', el.id || 'cta');
+    });
+  });
+  </script>
+
+</body>
+</html>

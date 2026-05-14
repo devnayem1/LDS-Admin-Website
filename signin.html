@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title id="meta-title">Přihlásit se – LDS Admin</title>
+  <meta name="description" id="meta-desc" content="Přihlaste se do platformy LDS Admin pro správu energetiky a distribučních sítí." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://ldsadmin.cz/signin" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="cs" href="https://ldsadmin.cz/signin" />
+  <link rel="alternate" hreflang="en" href="https://ldsadmin.cz/en/signin" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Přihlásit se – LDS Admin" />
+  <meta property="og:description" content="Přihlaste se do platformy LDS Admin." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      'ad_storage':'denied','ad_user_data':'denied',
+      'ad_personalization':'denied','analytics_storage':'denied',
+      'wait_for_update':500
+    });
+    gtag('set','ads_data_redaction',true);
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <style>
+    :root {
+      --brand: #465FFF;
+      --brand-dark: #2d47e0;
+      --brand-light: #6b82ff;
+      --brand-glow: rgba(70,95,255,0.18);
+      --brand-glow-sm: rgba(70,95,255,0.09);
+      --surface: #0a0d1a;
+      --surface-2: #0f1323;
+      --surface-3: #141829;
+      --surface-4: #1a1f33;
+      --border: rgba(255,255,255,0.08);
+      --border-focus: rgba(70,95,255,0.5);
+      --text-primary: #f0f2ff;
+      --text-secondary: #8b93b5;
+      --text-muted: #555e80;
+      --success: #22c55e;
+      --error: #ef4444;
+      --warning: #f59e0b;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--surface);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Noise texture */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025; pointer-events: none; z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--surface-2); }
+    ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
+
+    /* Focus */
+    :focus-visible { outline: 2px solid var(--brand-light); outline-offset: 3px; border-radius: 4px; }
+
+    /* ═══ LAYOUT ═══ */
+    .page-wrap {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative; z-index: 1;
+    }
+
+    /* ═══ LEFT PANEL ═══ */
+    .left-panel {
+      background: var(--surface-2);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      padding: 40px 56px;
+      position: relative; overflow: hidden;
+    }
+
+    /* Gradient orbs */
+    .left-panel::before {
+      content: '';
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(70,95,255,0.15) 0%, transparent 70%);
+      top: -150px; left: -150px; pointer-events: none;
+    }
+    .left-panel::after {
+      content: '';
+      position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(167,139,250,0.08) 0%, transparent 70%);
+      bottom: -100px; right: -50px; pointer-events: none;
+    }
+
+    /* Animated grid */
+    .left-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(70,95,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70,95,255,0.04) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: radial-gradient(ellipse 80% 80% at 30% 40%, black 0%, transparent 75%);
+    }
+
+    .left-content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    /* Logo */
+    .logo-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 64px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px; background: var(--brand);
+      border-radius: 9px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 900; color: #fff; letter-spacing: -0.5px;
+    }
+
+    /* Left headline area */
+    .left-headline { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 0; }
+    .left-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 12px; border-radius: 100px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      background: var(--brand-glow); color: var(--brand-light);
+      border: 1px solid rgba(70,95,255,0.2); margin-bottom: 24px; width: fit-content;
+    }
+    .live-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--success);
+      animation: livePulse 2s infinite;
+    }
+    @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.5)} }
+
+    .left-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700; line-height: 1.12;
+      letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 20%, var(--brand-light) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .left-sub {
+      font-size: 1rem; color: var(--text-secondary); line-height: 1.7;
+      max-width: 380px; margin-bottom: 40px;
+    }
+
+    /* Feature list */
+    .feature-list { display: flex; flex-direction: column; gap: 14px; }
+    .feature-item {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.87rem; color: var(--text-secondary);
+    }
+    .feature-check {
+      width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0;
+      background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature-check svg { width: 11px; height: 11px; color: var(--success); }
+
+    /* Dashboard mini preview */
+    .dash-preview {
+      margin-top: 48px;
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(70,95,255,0.08);
+    }
+    .dash-bar {
+      background: var(--surface-4); padding: 10px 14px;
+      display: flex; align-items: center; gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .dash-dots { display: flex; gap: 5px; }
+    .dash-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dash-dot:nth-child(1){background:rgba(239,68,68,0.6);}
+    .dash-dot:nth-child(2){background:rgba(245,158,11,0.6);}
+    .dash-dot:nth-child(3){background:rgba(34,197,94,0.6);}
+    .dash-title-text { font-size: 0.7rem; color: var(--text-muted); margin-left: 4px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+    .dash-status { margin-left: auto; font-size: 0.62rem; color: var(--success); background: rgba(34,197,94,0.1); padding: 2px 7px; border-radius: 100px; border: 1px solid rgba(34,197,94,0.15); }
+    .dash-body { padding: 16px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .mini-card {
+      background: var(--surface-4); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px;
+    }
+    .mini-label { font-size: 0.58rem; color: var(--text-muted); margin-bottom: 4px; }
+    .mini-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; }
+    .mini-change { font-size: 0.55rem; margin-top: 2px; }
+    .up { color: var(--success); } .down { color: var(--error); }
+    .dash-chart-row { padding: 0 16px 16px; }
+    .mini-chart { background: var(--surface-4); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+    .mini-chart-label { font-size: 0.58rem; color: var(--text-muted); margin-bottom: 8px; }
+    .chart-line-wrap { height: 40px; position: relative; }
+    .chart-line-wrap svg { width: 100%; height: 100%; }
+
+    /* Left footer */
+    .left-footer { margin-top: auto; padding-top: 32px; }
+    .left-footer-text { font-size: 0.78rem; color: var(--text-muted); }
+    .left-footer a { color: var(--brand-light); }
+
+    /* ═══ RIGHT PANEL ═══ */
+    .right-panel {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 40px 48px; position: relative;
+    }
+
+    /* Lang switcher top right */
+    .top-bar {
+      position: absolute; top: 32px; right: 40px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .lang-sw {
+      display: flex; background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: 8px; padding: 3px; overflow: hidden;
+    }
+    .lang-btn {
+      padding: 5px 10px; border-radius: 5px; font-size: 0.77rem; font-weight: 600;
+      color: var(--text-muted); cursor: pointer; transition: all var(--transition); border: none; background: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .lang-btn.active { background: var(--brand); color: #fff; }
+    .lang-btn:not(.active):hover { color: var(--text-primary); }
+
+    .back-link {
+      font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--text-primary); }
+    .back-link svg { width: 14px; height: 14px; }
+
+    /* Form card */
+    .form-card {
+      width: 100%; max-width: 420px;
+    }
+
+    .form-header { text-align: center; margin-bottom: 36px; }
+    .form-title {
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem;
+      font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    .form-subtitle { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Tabs */
+    .auth-tabs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: 10px; padding: 4px; margin-bottom: 28px;
+      gap: 4px;
+    }
+    .auth-tab {
+      padding: 10px; border-radius: 7px; font-size: 0.88rem; font-weight: 600;
+      color: var(--text-muted); cursor: pointer; text-align: center;
+      transition: all var(--transition); border: none; background: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .auth-tab.active {
+      background: var(--surface); color: var(--text-primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 0 1px var(--border);
+    }
+    .auth-tab:not(.active):hover { color: var(--text-secondary); background: var(--brand-glow-sm); }
+
+    /* Input groups */
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-label {
+      font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .form-label a { color: var(--brand-light); font-weight: 500; font-size: 0.78rem; transition: opacity var(--transition); }
+    .form-label a:hover { opacity: 0.75; }
+
+    .input-wrap { position: relative; }
+    .input-icon {
+      position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); pointer-events: none; transition: color var(--transition);
+    }
+    .input-icon svg { width: 16px; height: 16px; display: block; }
+    .form-input {
+      width: 100%; background: var(--surface-3); border: 1px solid var(--border);
+      border-radius: 10px; padding: 13px 14px 13px 42px;
+      color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 0.93rem;
+      transition: all var(--transition); outline: none;
+    }
+    .form-input::placeholder { color: var(--text-muted); }
+    .form-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-glow-sm); }
+    .form-input:focus ~ .input-icon { color: var(--brand-light); }
+    .form-input.has-error { border-color: var(--error); }
+    .form-input.has-success { border-color: var(--success); }
+
+    /* Password toggle */
+    .pw-toggle {
+      position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); cursor: pointer; padding: 4px;
+      transition: color var(--transition); background: none; border: none;
+    }
+    .pw-toggle:hover { color: var(--text-primary); }
+    .pw-toggle svg { width: 16px; height: 16px; display: block; }
+
+    .field-error { font-size: 0.75rem; color: var(--error); display: flex; align-items: center; gap: 4px; }
+    .field-error svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+    /* Options row */
+    .options-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .checkbox-label {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.83rem; color: var(--text-secondary); cursor: pointer;
+    }
+    .checkbox-label input { display: none; }
+    .custom-checkbox {
+      width: 16px; height: 16px; border: 1.5px solid var(--border);
+      border-radius: 4px; background: var(--surface-3); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .checkbox-label input:checked + .custom-checkbox {
+      background: var(--brand); border-color: var(--brand);
+    }
+    .checkbox-label input:checked + .custom-checkbox::after {
+      content: ''; display: block; width: 8px; height: 4px;
+      border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+      transform: rotate(-45deg) translateY(-1px);
+    }
+
+    /* Submit btn */
+    .btn-submit {
+      width: 100%; padding: 14px; border-radius: 10px;
+      background: var(--brand); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; border: none; position: relative; overflow: hidden;
+      transition: all var(--transition); display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 16px;
+    }
+    .btn-submit::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .btn-submit:hover { background: var(--brand-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(70,95,255,0.35); }
+    .btn-submit:hover::before { opacity: 1; }
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Divider */
+    .or-divider {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.78rem; color: var(--text-muted); margin-bottom: 16px;
+    }
+    .or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* SSO button */
+    .btn-sso {
+      width: 100%; padding: 12px; border-radius: 10px;
+      background: var(--surface-3); color: var(--text-secondary);
+      font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border);
+      transition: all var(--transition); display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 8px;
+    }
+    .btn-sso:hover { color: var(--text-primary); border-color: rgba(70,95,255,0.3); background: var(--brand-glow-sm); }
+    .btn-sso svg { width: 17px; height: 17px; flex-shrink: 0; }
+
+    /* Alert */
+    .form-alert {
+      padding: 12px 16px; border-radius: 9px; font-size: 0.85rem;
+      display: none; align-items: flex-start; gap: 10px; margin-bottom: 16px;
+    }
+    .form-alert.show { display: flex; }
+    .form-alert.error { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); color: #fca5a5; }
+    .form-alert.success { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); color: #86efac; }
+    .form-alert svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    /* Register form (hidden by default) */
+    .form-panel { display: none; }
+    .form-panel.active { display: block; }
+
+    /* Footer note */
+    .form-note {
+      text-align: center; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; margin-top: 8px;
+    }
+    .form-note a { color: var(--brand-light); }
+
+    /* Security badges */
+    .security-row {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .sec-badge {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 0.72rem; color: var(--text-muted);
+    }
+    .sec-badge svg { width: 13px; height: 13px; color: var(--success); }
+
+    /* Strength meter */
+    .strength-meter { margin-top: 6px; }
+    .strength-bars { display: flex; gap: 4px; margin-bottom: 4px; }
+    .strength-bar { height: 3px; flex: 1; border-radius: 2px; background: var(--surface-4); transition: background 0.3s; }
+    .strength-label { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* Mobile responsiveness */
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .left-panel { display: none; }
+      .right-panel { padding: 24px 20px; padding-top: 80px; }
+      .top-bar { right: 20px; top: 20px; }
+    }
+    @media (max-width: 480px) {
+      .right-panel { padding: 16px; padding-top: 72px; }
+      .form-card { max-width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden" title="GTM"></iframe></noscript>
+
+<div class="page-wrap">
+
+  <!-- ═══ LEFT PANEL ═══ -->
+  <aside class="left-panel" aria-label="LDS Admin platform preview">
+    <div class="left-grid" aria-hidden="true"></div>
+    <div class="left-content">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" aria-label="LDS Admin – Domovská stránka">
+        <div class="logo-icon" aria-hidden="true">LDS</div>
+        LDS Admin
+      </a>
+
+      <!-- Headline -->
+      <div class="left-headline">
+        <div class="left-badge">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="lp-badge" data-cs="Platforma online" data-en="Platform online">Platforma online</span>
+        </div>
+        <h1 class="left-h1">
+          <span class="gradient-text" id="lp-h1" data-cs="Vítejte zpět" data-en="Welcome back">Vítejte zpět</span><br/>
+          <span id="lp-h1b" data-cs="do LDS Admin" data-en="to LDS Admin">do LDS Admin</span>
+        </h1>
+        <p class="left-sub" id="lp-sub"
+           data-cs="Přihlaste se a získejte přístup k real-time monitoringu, GIS správě a dispečerského přehledu vaší distribuční sítě."
+           data-en="Sign in to access real-time monitoring, GIS management and dispatch overview of your distribution network.">
+          Přihlaste se a získejte přístup k real-time monitoringu, GIS správě a dispečerského přehledu vaší distribuční sítě.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 6 4 9 11 2"/></svg>
+            </div>
+            <span id="fl-1" data-cs="Monitoring v reálném čase" data-en="Real-time monitoring">Monitoring v reálném čase</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 6 4 9 11 2"/></svg>
+            </div>
+            <span id="fl-2" data-cs="Interaktivní GIS mapa sítě" data-en="Interactive GIS network map">Interaktivní GIS mapa sítě</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 6 4 9 11 2"/></svg>
+            </div>
+            <span id="fl-3" data-cs="Správa odběratelů a revizí" data-en="Customer and inspection management">Správa odběratelů a revizí</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 6 4 9 11 2"/></svg>
+            </div>
+            <span id="fl-4" data-cs="Automatická upozornění a reporty" data-en="Automatic alerts and reports">Automatická upozornění a reporty</span>
+          </div>
+        </div>
+
+        <!-- Mini dashboard preview -->
+        <div class="dash-preview" aria-hidden="true">
+          <div class="dash-bar">
+            <div class="dash-dots"><div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div></div>
+            <div class="dash-title-text">main.ldsadmin.cz — Dashboard</div>
+            <div class="dash-status">● Online</div>
+          </div>
+          <div class="dash-body">
+            <div class="mini-card">
+              <div class="mini-label">Napětí</div>
+              <div class="mini-val" style="color:#60a5fa">231<span style="font-size:0.55rem;font-weight:400;color:var(--text-muted)">V</span></div>
+              <div class="mini-change up">↑ +0.3%</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-label">Výkon</div>
+              <div class="mini-val" style="color:#a78bfa">48<span style="font-size:0.55rem;font-weight:400;color:var(--text-muted)">kW</span></div>
+              <div class="mini-change up">↑ +2.1%</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-label">Spotřeba</div>
+              <div class="mini-val" style="color:#34d399">182<span style="font-size:0.55rem;font-weight:400;color:var(--text-muted)">kWh</span></div>
+              <div class="mini-change down">↓ -0.8%</div>
+            </div>
+          </div>
+          <div class="dash-chart-row">
+            <div class="mini-chart">
+              <div class="mini-chart-label">Spotřeba (7 dní)</div>
+              <div class="chart-line-wrap">
+                <svg viewBox="0 0 200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#465FFF" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#465FFF" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,30 L28,22 L57,26 L85,14 L114,18 L142,6 L171,12 L200,8" fill="none" stroke="#465FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M0,30 L28,22 L57,26 L85,14 L114,18 L142,6 L171,12 L200,8 L200,40 L0,40 Z" fill="url(#lineGrad)"/>
+                  <circle cx="200" cy="8" r="3" fill="#465FFF"/>
+                  <circle cx="200" cy="8" r="5" fill="rgba(70,95,255,0.25)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left footer -->
+      <div class="left-footer">
+        <div class="left-footer-text" id="lp-footer"
+             data-cs="Nemáte ještě přístup? <a href='index.html'>Požádejte o demo →</a>"
+             data-en="Don't have access yet? <a href='index.html'>Request a demo →</a>">
+          Nemáte ještě přístup? <a href="index.html">Požádejte o demo →</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══ RIGHT PANEL ═══ -->
+  <main class="right-panel" id="main">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <a href="index.html" class="back-link" aria-label="Zpět na hlavní stránku">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="10" y1="3" x2="4" y2="8"/><line x1="4" y1="8" x2="10" y2="13"/></svg>
+        <span id="back-text" data-cs="Zpět" data-en="Back">Zpět</span>
+      </a>
+      <div class="lang-sw" role="group" aria-label="Jazyk / Language">
+        <button class="lang-btn active" id="lang-cs" onclick="setLang('cs')" aria-pressed="true">CS</button>
+        <button class="lang-btn" id="lang-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <div class="form-card">
+
+      <!-- Header -->
+      <div class="form-header">
+        <!-- Mobile logo -->
+        <a href="/" class="logo-link" style="justify-content:center;margin-bottom:24px" aria-label="LDS Admin">
+          <div class="logo-icon" aria-hidden="true">LDS</div>
+          LDS Admin
+        </a>
+        <h2 class="form-title" id="form-title" data-cs="Přihlášení do systému" data-en="Sign in to your account">Přihlášení do systému</h2>
+        <p class="form-subtitle" id="form-subtitle" data-cs="Zadejte přihlašovací údaje pro přístup k platformě" data-en="Enter your credentials to access the platform">Zadejte přihlašovací údaje pro přístup k platformě</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs" role="tablist" aria-label="Typ přihlášení">
+        <button class="auth-tab active" id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login"
+                onclick="switchTab('login')" data-cs="Přihlásit se" data-en="Sign In">Přihlásit se</button>
+        <button class="auth-tab" id="tab-register" role="tab" aria-selected="false" aria-controls="panel-register"
+                onclick="switchTab('register')" data-cs="Registrace" data-en="Register">Registrace</button>
+      </div>
+
+      <!-- ALERT -->
+      <div class="form-alert error" id="form-alert" role="alert" aria-live="assertive">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="9"/><circle cx="8" cy="11" r="0.5" fill="currentColor"/></svg>
+        <span id="alert-text"></span>
+      </div>
+      <div class="form-alert success" id="form-success" role="status" aria-live="polite">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polyline points="5 8 7 10 11 6"/></svg>
+        <span id="success-text"></span>
+      </div>
+
+      <!-- ═══ LOGIN PANEL ═══ -->
+      <div class="form-panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <form id="login-form" novalidate autocomplete="on">
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="login-email">
+              <span data-cs="E-mail" data-en="Email">E-mail</span>
+            </label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h12c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V4c0-.6.4-1 1-1z"/><polyline points="15,4 8,9 1,4"/></svg>
+              </div>
+              <input type="email" id="login-email" name="email" class="form-input" required
+                     autocomplete="email" aria-required="true"
+                     placeholder="jan@spolecnost.cz" />
+            </div>
+            <span class="field-error" id="err-login-email" role="alert" style="display:none">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="5"/><line x1="6" y1="4" x2="6" y2="7"/><circle cx="6" cy="9" r="0.4" fill="currentColor"/></svg>
+              <span id="err-login-email-text" data-cs="Zadejte platný e-mail." data-en="Enter a valid email.">Zadejte platný e-mail.</span>
+            </span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">
+              <span data-cs="Heslo" data-en="Password">Heslo</span>
+              <a href="#reset" onclick="showReset(event)" id="forgot-link"
+                 data-cs="Zapomenuté heslo?" data-en="Forgot password?">Zapomenuté heslo?</a>
+            </label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+              </div>
+              <input type="password" id="login-password" name="password" class="form-input" required
+                     autocomplete="current-password" aria-required="true"
+                     placeholder="••••••••" />
+              <button type="button" class="pw-toggle" onclick="togglePw('login-password','eye-login')" aria-label="Zobrazit/skrýt heslo">
+                <svg id="eye-login" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="err-login-pw" role="alert" style="display:none">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="5"/><line x1="6" y1="4" x2="6" y2="7"/><circle cx="6" cy="9" r="0.4" fill="currentColor"/></svg>
+              <span id="err-login-pw-text" data-cs="Zadejte heslo." data-en="Enter your password.">Zadejte heslo.</span>
+            </span>
+          </div>
+
+          <!-- Remember me -->
+          <div class="options-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember-me" name="remember" />
+              <span class="custom-checkbox" aria-hidden="true"></span>
+              <span id="remember-text" data-cs="Zapamatovat přihlášení" data-en="Remember me">Zapamatovat přihlášení</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit" id="login-submit">
+            <div class="spinner" id="login-spinner" aria-hidden="true"></div>
+            <svg id="login-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7"/><polyline points="9 11 12 8 9 5"/><line x1="12" y1="8" x2="4" y2="8"/></svg>
+            <span id="login-btn-text" data-cs="Přihlásit se" data-en="Sign In">Přihlásit se</span>
+          </button>
+
+          <div class="or-divider"><span data-cs="nebo" data-en="or">nebo</span></div>
+
+          <!-- SSO redirect -->
+          <button type="button" class="btn-sso" onclick="handleSSOClick()">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            <span data-cs="Pokračovat přes Google SSO" data-en="Continue with Google SSO">Pokračovat přes Google SSO</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- ═══ REGISTER PANEL ═══ -->
+      <div class="form-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+        <form id="register-form" novalidate autocomplete="on">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+            <div class="form-group" style="margin:0">
+              <label class="form-label" for="reg-firstname">
+                <span data-cs="Jméno" data-en="First name">Jméno</span>
+              </label>
+              <div class="input-wrap">
+                <div class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 13v-1a5 5 0 0 0-10 0v1"/><circle cx="8" cy="5" r="3"/></svg>
+                </div>
+                <input type="text" id="reg-firstname" name="firstname" class="form-input" required
+                       autocomplete="given-name" placeholder="Jan" aria-required="true" />
+              </div>
+            </div>
+            <div class="form-group" style="margin:0">
+              <label class="form-label" for="reg-lastname">
+                <span data-cs="Příjmení" data-en="Last name">Příjmení</span>
+              </label>
+              <div class="input-wrap">
+                <div class="input-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 13v-1a5 5 0 0 0-10 0v1"/><circle cx="8" cy="5" r="3"/></svg>
+                </div>
+                <input type="text" id="reg-lastname" name="lastname" class="form-input" required
+                       autocomplete="family-name" placeholder="Novák" aria-required="true" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-company"><span data-cs="Společnost" data-en="Company">Společnost</span></label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="12" height="13" rx="1"/><line x1="6" y1="6" x2="10" y2="6"/><line x1="6" y1="9" x2="10" y2="9"/><line x1="6" y1="12" x2="10" y2="12"/></svg>
+              </div>
+              <input type="text" id="reg-company" name="company" class="form-input"
+                     autocomplete="organization" placeholder="Vaše společnost s.r.o." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email"><span data-cs="E-mail" data-en="Email">E-mail</span></label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h12c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V4c0-.6.4-1 1-1z"/><polyline points="15,4 8,9 1,4"/></svg>
+              </div>
+              <input type="email" id="reg-email" name="email" class="form-input" required
+                     autocomplete="email" placeholder="jan@spolecnost.cz" aria-required="true" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-password"><span data-cs="Heslo" data-en="Password">Heslo</span></label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+              </div>
+              <input type="password" id="reg-password" name="password" class="form-input" required
+                     autocomplete="new-password" placeholder="Minimálně 8 znaků" aria-required="true"
+                     oninput="checkStrength(this.value)" />
+              <button type="button" class="pw-toggle" onclick="togglePw('reg-password','eye-reg')" aria-label="Zobrazit/skrýt heslo">
+                <svg id="eye-reg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg>
+              </button>
+            </div>
+            <!-- Strength meter -->
+            <div class="strength-meter" id="strength-meter" style="display:none">
+              <div class="strength-bars">
+                <div class="strength-bar" id="sb1"></div>
+                <div class="strength-bar" id="sb2"></div>
+                <div class="strength-bar" id="sb3"></div>
+                <div class="strength-bar" id="sb4"></div>
+              </div>
+              <div class="strength-label" id="strength-label"></div>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:20px">
+            <label class="checkbox-label">
+              <input type="checkbox" id="reg-terms" required />
+              <span class="custom-checkbox" aria-hidden="true"></span>
+              <span id="terms-text" data-cs="Souhlasím s <a href='#'>podmínkami použití</a> a <a href='#'>zásadami ochrany osobních údajů</a>" data-en="I agree to the <a href='#'>terms of use</a> and <a href='#'>privacy policy</a>">
+                Souhlasím s <a href="#" style="color:var(--brand-light)">podmínkami použití</a> a <a href="#" style="color:var(--brand-light)">zásadami ochrany osobních údajů</a>
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit" id="reg-submit">
+            <div class="spinner" id="reg-spinner" aria-hidden="true"></div>
+            <svg id="reg-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 1v14M1 8h14" opacity="0.6"/><circle cx="8" cy="8" r="6"/></svg>
+            <span id="reg-btn-text" data-cs="Požádat o přístup" data-en="Request Access">Požádat o přístup</span>
+          </button>
+
+          <p class="form-note" id="reg-note"
+             data-cs="Po odeslání vás budeme kontaktovat a nastavíme přístup k platformě."
+             data-en="After submission we will contact you to set up platform access.">
+            Po odeslání vás budeme kontaktovat a nastavíme přístup k platformě.
+          </p>
+        </form>
+      </div>
+
+      <!-- ═══ RESET PANEL ═══ -->
+      <div class="form-panel" id="panel-reset" role="tabpanel">
+        <div style="margin-bottom:20px">
+          <button type="button" onclick="switchTab('login')" style="background:none;border:none;cursor:pointer;color:var(--brand-light);font-size:0.83rem;display:flex;align-items:center;gap:5px;font-family:'Inter',sans-serif;padding:0">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="10" y1="3" x2="4" y2="8"/><line x1="4" y1="8" x2="10" y2="13"/></svg>
+            <span id="back-to-login" data-cs="Zpět na přihlášení" data-en="Back to sign in">Zpět na přihlášení</span>
+          </button>
+        </div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:8px" id="reset-title" data-cs="Obnovení hesla" data-en="Reset password">Obnovení hesla</h3>
+        <p style="font-size:0.87rem;color:var(--text-secondary);margin-bottom:24px" id="reset-sub" data-cs="Zadejte e-mail a zašleme vám odkaz pro obnovení hesla." data-en="Enter your email and we'll send you a password reset link.">Zadejte e-mail a zašleme vám odkaz pro obnovení hesla.</p>
+        <form id="reset-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="reset-email"><span data-cs="E-mail" data-en="Email">E-mail</span></label>
+            <div class="input-wrap">
+              <div class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h12c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V4c0-.6.4-1 1-1z"/><polyline points="15,4 8,9 1,4"/></svg>
+              </div>
+              <input type="email" id="reset-email" name="email" class="form-input" required
+                     autocomplete="email" placeholder="jan@spolecnost.cz" />
+            </div>
+          </div>
+          <button type="submit" class="btn-submit" id="reset-submit">
+            <div class="spinner" id="reset-spinner" aria-hidden="true"></div>
+            <span id="reset-btn-text" data-cs="Odeslat odkaz" data-en="Send reset link">Odeslat odkaz</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Security badges -->
+      <div class="security-row" role="list" aria-label="Bezpečnostní certifikace">
+        <div class="sec-badge" role="listitem">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2l5 2v4c0 3-2.5 5.5-5 6-2.5-.5-5-3-5-6V4l5-2z"/><polyline points="5 8 7 10 11 6"/></svg>
+          SSL / TLS
+        </div>
+        <div class="sec-badge" role="listitem">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+          GDPR
+        </div>
+        <div class="sec-badge" role="listitem">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polyline points="5 8 7 10 11 6"/></svg>
+          2FA Ready
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  var currentLang = localStorage.getItem('ldsadmin_lang') || 'cs';
+  function trackEvent(e,l,x){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:e,event_location:l,language:currentLang,...(x||{})});}
+
+  // Lang
+  function setLang(lang){
+    currentLang=lang;
+    localStorage.setItem('ldsadmin_lang',lang);
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-'+lang+']').forEach(function(el){
+      var t=el.getAttribute('data-'+lang);
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=t;}
+      else if(el.innerHTML!==undefined&&/<[a-z]/i.test(t)){el.innerHTML=t;}
+      else{el.textContent=t;}
+    });
+    document.getElementById('lang-cs').classList.toggle('active',lang==='cs');
+    document.getElementById('lang-en').classList.toggle('active',lang==='en');
+    document.getElementById('lang-cs').setAttribute('aria-pressed',lang==='cs');
+    document.getElementById('lang-en').setAttribute('aria-pressed',lang==='en');
+    var titles={cs:'Přihlásit se – LDS Admin',en:'Sign In – LDS Admin'};
+    document.title=titles[lang];
+    trackEvent('language_switch','signin_page',{new_language:lang});
+  }
+  document.addEventListener('DOMContentLoaded',function(){setLang(currentLang);});
+
+  // Tabs
+  function switchTab(tab){
+    ['login','register','reset'].forEach(function(t){
+      document.getElementById('panel-'+t).classList.toggle('active',t===tab);
+      var tabBtn=document.getElementById('tab-'+t);
+      if(tabBtn){tabBtn.classList.toggle('active',t===tab);tabBtn.setAttribute('aria-selected',t===tab);}
+    });
+    hideAlerts();
+    if(tab==='login'){
+      document.getElementById('form-title').setAttribute('data-cs','Přihlášení do systému');
+      document.getElementById('form-title').setAttribute('data-en','Sign in to your account');
+    } else if(tab==='register'){
+      document.getElementById('form-title').setAttribute('data-cs','Požádat o přístup');
+      document.getElementById('form-title').setAttribute('data-en','Request Access');
+    }
+    setLang(currentLang);
+  }
+
+  function showReset(e){e.preventDefault();switchTab('reset');}
+
+  // Alerts
+  function showAlert(type,text){
+    hideAlerts();
+    var el=type==='success'?document.getElementById('form-success'):document.getElementById('form-alert');
+    var textEl=type==='success'?document.getElementById('success-text'):document.getElementById('alert-text');
+    textEl.textContent=text;
+    el.classList.add('show');
+  }
+  function hideAlerts(){
+    document.getElementById('form-alert').classList.remove('show');
+    document.getElementById('form-success').classList.remove('show');
+  }
+
+  // Password toggle
+  function togglePw(id,eyeId){
+    var input=document.getElementById(id);
+    var isText=input.type==='text';
+    input.type=isText?'password':'text';
+    var svg=document.getElementById(eyeId);
+    svg.innerHTML=isText
+      ?'<path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/>'
+      :'<path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/><line x1="2" y1="2" x2="14" y2="14"/>';
+  }
+
+  // Password strength
+  function checkStrength(val){
+    var meter=document.getElementById('strength-meter');
+    var label=document.getElementById('strength-label');
+    if(!val){meter.style.display='none';return;}
+    meter.style.display='block';
+    var score=0;
+    if(val.length>=8)score++;
+    if(/[A-Z]/.test(val))score++;
+    if(/[0-9]/.test(val))score++;
+    if(/[^A-Za-z0-9]/.test(val))score++;
+    var colors=['#ef4444','#f59e0b','#3b82f6','#22c55e'];
+    var labels={cs:['Velmi slabé','Slabé','Dobré','Silné'],en:['Very weak','Weak','Good','Strong']};
+    for(var i=1;i<=4;i++){
+      var bar=document.getElementById('sb'+i);
+      bar.style.background=i<=score?colors[score-1]:'var(--surface-4)';
+    }
+    label.textContent=labels[currentLang][score-1]||'';
+    label.style.color=colors[score-1]||'var(--text-muted)';
+  }
+
+  // Loading state helper
+  function setLoading(btnId,spinnerId,iconId,loading){
+    var btn=document.getElementById(btnId);
+    var sp=document.getElementById(spinnerId);
+    var ic=document.getElementById(iconId);
+    btn.disabled=loading;
+    if(sp)sp.style.display=loading?'block':'none';
+    if(ic)ic.style.display=loading?'none':'block';
+  }
+
+  // LOGIN submit
+  document.getElementById('login-form').addEventListener('submit',async function(e){
+    e.preventDefault();
+    hideAlerts();
+    var email=document.getElementById('login-email');
+    var pw=document.getElementById('login-password');
+    var valid=true;
+
+    document.getElementById('err-login-email').style.display='none';
+    document.getElementById('err-login-pw').style.display='none';
+    email.classList.remove('has-error');pw.classList.remove('has-error');
+
+    if(!email.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+      email.classList.add('has-error');document.getElementById('err-login-email').style.display='flex';valid=false;
+    }
+    if(!pw.value){
+      pw.classList.add('has-error');document.getElementById('err-login-pw').style.display='flex';valid=false;
+    }
+    if(!valid)return;
+
+    setLoading('login-submit','login-spinner','login-icon',true);
+    trackEvent('login_click','signin_form');
+
+    try {
+      // Redirect to admin platform
+      await new Promise(r=>setTimeout(r,800));
+      trackEvent('login_success','signin_form');
+      window.location.href='https://main.ldsadmin.cz';
+    } catch(err){
+      var msgs={cs:'Přihlášení se nezdařilo. Zkontrolujte e-mail a heslo.',en:'Login failed. Please check your email and password.'};
+      showAlert('error',msgs[currentLang]);
+      setLoading('login-submit','login-spinner','login-icon',false);
+    }
+  });
+
+  // REGISTER submit
+  document.getElementById('register-form').addEventListener('submit',async function(e){
+    e.preventDefault();
+    hideAlerts();
+    var email=document.getElementById('reg-email');
+    var terms=document.getElementById('reg-terms');
+    if(!email.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+      showAlert('error',currentLang==='cs'?'Zadejte platný e-mail.':'Enter a valid email.');return;
+    }
+    if(!terms.checked){
+      showAlert('error',currentLang==='cs'?'Musíte souhlasit s podmínkami.':'You must agree to the terms.');return;
+    }
+    setLoading('reg-submit','reg-spinner','reg-icon',true);
+    trackEvent('register_request','register_form');
+
+    try{
+      var res=await fetch('/api/contact',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name:(document.getElementById('reg-firstname').value+' '+document.getElementById('reg-lastname').value).trim(),
+          email:email.value,
+          company:document.getElementById('reg-company').value,
+          message:'Žádost o přístup k platformě LDS Admin.',
+          type:'access_request',lang:currentLang
+        })
+      });
+      if(res.ok){
+        showAlert('success',currentLang==='cs'?'Žádost odeslána! Ozveme se vám do 24 hodin.':'Request sent! We\'ll contact you within 24 hours.');
+        document.getElementById('register-form').reset();
+        trackEvent('form_submit','register_form',{form_type:'access_request'});
+      } else { throw new Error('err'); }
+    }catch(err){
+      showAlert('error',currentLang==='cs'?'Odeslání se nezdařilo. Kontaktujte nás na support@ldsadmin.cz':'Sending failed. Contact us at support@ldsadmin.cz');
+      trackEvent('form_error','register_form');
+    }
+    setLoading('reg-submit','reg-spinner','reg-icon',false);
+  });
+
+  // RESET submit
+  document.getElementById('reset-form').addEventListener('submit',async function(e){
+    e.preventDefault();
+    hideAlerts();
+    var email=document.getElementById('reset-email');
+    if(!email.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+      showAlert('error',currentLang==='cs'?'Zadejte platný e-mail.':'Enter a valid email.');return;
+    }
+    setLoading('reset-submit','reset-spinner',null,true);
+    trackEvent('password_reset_request','reset_form');
+    await new Promise(r=>setTimeout(r,800));
+    showAlert('success',currentLang==='cs'?'Odkaz pro obnovení hesla byl odeslán na váš e-mail.':'Password reset link has been sent to your email.');
+    setLoading('reset-submit','reset-spinner',null,false);
+  });
+
+  function handleSSOClick(){
+    trackEvent('sso_click','signin_form',{provider:'google'});
+    showAlert('error',currentLang==='cs'?'SSO přihlášení bude brzy k dispozici.':'SSO login will be available soon.');
+  }
+</script>
+</body>
+</html>
